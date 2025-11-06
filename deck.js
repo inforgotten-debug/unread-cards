@@ -1,4 +1,3 @@
-<script>
 window.DECK =
 [
   {
@@ -782,4 +781,3 @@ window.DECK =
     "reversedLong": ""
   }
 ];
-</script>
