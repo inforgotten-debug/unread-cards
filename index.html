@@ -95,8 +95,8 @@
       titleEl.textContent = card?.name || 'Unknown Card';
       badgeEl.textContent = reversed ? 'Reversed' : 'Upright';
       descEl.innerHTML = `
-        <p>${text}</p>
-        ${card.prompt ? `<p style="margin-top:12px; color:#e7c56f; font-style:italic;">${card.prompt}</p>` : ''}
+        <p style="margin:0;">${text}</p>
+        ${card.prompt ? `<p style="margin:4px 0 0; color:#e7c56f; font-style:italic;">${card.prompt}</p>` : ''}
       `;
 
       resultEl.style.display = 'block';
