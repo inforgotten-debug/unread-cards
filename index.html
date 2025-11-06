@@ -3,169 +3,122 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>The Unread Cards · Dual Image Generator</title>
+  <title>The Unread Cards · Minimal, Mobile‑Friendly</title>
   <style>
-    body{margin:0; font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial; background:#0f0f12; color:#f4f4f6; display:flex; justify-content:center; align-items:center; min-height:100vh; padding:20px}
-    .app{background:#15151b; border:1px solid #24242c; border-radius:18px; padding:24px; max-width:720px; width:100%; box-shadow:0 8px 32px rgba(0,0,0,.4)}
-    h1{margin:0 0 8px; font-size:26px}
-    p.sub{margin:0 0 16px; color:#a9a9b5}
-    .controls{display:flex; gap:10px; flex-wrap:wrap; margin-bottom:16px}
-    .btn{background:#1c1c22; color:#f4f4f6; border:1px solid #24242c; padding:10px 14px; border-radius:12px; cursor:pointer; font-weight:600}
-    .btn.primary{background:#e7c56f; color:#141414; border:0}
-    .btn:disabled{opacity:.6; cursor:not-allowed}
-    .result{display:none; border:1px solid #24242c; border-radius:14px; overflow:hidden}
-    .card-top{display:flex; gap:16px; padding:16px; background:#101015; align-items:flex-start}
-    .thumb{width:160px; aspect-ratio:3/5; background:#0b0b0f; border:1px solid #24242c; border-radius:10px; overflow:hidden; display:flex; align-items:center; justify-content:center}
-    .thumb img{width:100%; height:100%; object-fit:cover; display:block}
-    .meta{flex:1}
-    .title{font-size:22px; font-weight:800; display:flex; gap:8px; align-items:center}
-    .badge{font-size:11px; padding:4px 8px; border-radius:999px; border:1px solid #24242c; color:#a9a9b5}
-    .desc{margin-top:8px; line-height:1.6}
-    .footer{padding:12px 16px; background:#0e0e12; display:flex; align-items:center; justify-content:space-between; color:#a9a9b5; font-size:12px}
+    :root{ --bg:#0f0f12; --panel:#15151b; --line:#24242c; --text:#f4f4f6; --muted:#a9a9b5; --accent:#e7c56f; }
+    *{ box-sizing:border-box }
+    body{ margin:0; font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial; background:var(--bg); color:var(--text); }
+    .wrap{ min-height:100svh; display:flex; align-items:center; justify-content:center; padding:16px }
+    .app{ width:100%; max-width:760px; background:var(--panel); border:1px solid var(--line); border-radius:18px; box-shadow:0 8px 32px rgba(0,0,0,.4); padding:20px }
+    h1{ margin:0 0 6px; font-size:24px }
+    p.sub{ margin:0 0 14px; color:var(--muted); font-size:14px }
+
+    .controls{ display:flex; gap:10px; flex-wrap:wrap; margin-bottom:14px }
+    .btn{ appearance:none; border:1px solid var(--line); background:#1c1c22; color:var(--text); padding:10px 14px; border-radius:12px; font-weight:700; cursor:pointer }
+    .btn.primary{ background:var(--accent); color:#141414; border:0 }
+    .btn:disabled{ opacity:.6; cursor:not-allowed }
+
+    .result{ display:none; border:1px solid var(--line); border-radius:14px; overflow:hidden; }
+    .card-top{ display:flex; gap:16px; padding:16px; background:#101015; align-items:flex-start }
+    .thumb{ width:180px; max-width:45vw; aspect-ratio:3/5; background:#0b0b0f; border:1px solid var(--line); border-radius:10px; overflow:hidden; display:flex; align-items:center; justify-content:center }
+    .thumb img{ width:100%; height:100%; object-fit:cover; display:block }
+    .meta{ flex:1; min-width:0 }
+    .title{ font-size:20px; font-weight:800; display:flex; gap:8px; align-items:center; line-height:1.2; }
+    .badge{ font-size:11px; padding:4px 8px; border-radius:999px; border:1px solid var(--line); color:var(--muted); white-space:nowrap }
+    .desc{ margin-top:8px; line-height:1.6; font-size:15px; white-space:pre-line; max-height:42svh; overflow:auto; -webkit-overflow-scrolling:touch }
+    .footer{ padding:10px 14px; background:#0e0e12; display:flex; align-items:center; justify-content:space-between; color:var(--muted); font-size:12px }
+
+    #deckWarning{ margin-top:10px; color:#ffb3b3; font-size:13px }
+
+    @media (max-width:600px){
+      .card-top{ flex-direction:column }
+      .thumb{ width:100%; max-width:none }
+      .title{ font-size:18px }
+    }
   </style>
 </head>
 <body>
-  <div class="app">
-    <h1>The Unread Cards</h1>
-    <p class="sub">Draw a single card (upright or reversed). Each side has its own image and meaning.</p>
+  <div class="wrap">
+    <div class="app">
+      <h1>The Unread Cards</h1>
+      <p class="sub">Draw a single card (upright or reversed). Long, reflective meanings are supported.</p>
 
-    <div class="controls">
-      <button id="drawBtn" class="btn primary">Draw a Card</button>
-      <button id="resetBtn" class="btn" disabled>Start Over</button>
-    </div>
+      <div class="controls">
+        <button id="drawBtn" class="btn primary">Draw a Card</button>
+      </div>
 
-    <section id="result" class="result">
-      <div class="card-top">
-        <div class="thumb">
-          <img id="cardImg" alt="Card image" />
-        </div>
-        <div class="meta">
-          <div class="title">
-            <span id="cardTitle">—</span>
-            <span id="poseBadge" class="badge">Upright</span>
+      <section id="result" class="result" aria-live="polite">
+        <div class="card-top">
+          <div class="thumb">
+            <img id="cardImg" alt="Tarot card image" loading="lazy" />
           </div>
-          <div id="cardDesc" class="desc">—</div>
+          <div class="meta">
+            <div class="title">
+              <span id="cardTitle">—</span>
+              <span id="poseBadge" class="badge">Upright</span>
+            </div>
+            <div id="cardDesc" class="desc">—</div>
+          </div>
         </div>
-      </div>
-      <div class="footer">
-        <span id="hint">Tip: Each position shows its unique artwork and reflection.</span>
-        <span id="index"></span>
-      </div>
-    </section>
+        <div class="footer">
+          <span id="hint">Tip: Upright and reversed have different images & meanings.</span>
+        </div>
+      </section>
+
+      <p id="deckWarning" style="display:none">No deck found. Load a script that sets <code>window.DECK = [ ... ]</code> before this file.</p>
+    </div>
   </div>
 
+  <!-- Include your deck BEFORE this inline script, e.g.:
+       <script src="deck.js"></script>
+       where deck.js sets window.DECK = [ { key, name, imgUpright, imgReversed, upright, reversed, uprightLong?, reversedLong? }, ... ]
+  -->
   <script>
-    const DECK = [
-  // === Major Arcana (0–21) ===
-  { key:"major_00", name:"The Fool (0)", imgUpright:"/images/major_00_u.jpg", imgReversed:"/images/major_00_r.jpg", upright:"Traditional: new beginnings, innocence, trust in the path. Inner reading: the heart wants space to explore without guarantees. Let wonder outrun caution for one step. Gentle prompt: What tiny experiment would feel playful and safe today?", reversed:"Traditional: recklessness, hesitation, poor planning. Inner reading: fear dresses up as perfectionism. You can begin imperfectly. Gentle prompt: What small safeguard would let you take the first honest step?" },
-  { key:"major_01", name:"The Magician (1)", imgUpright:"/images/major_01_u.jpg", imgReversed:"/images/major_01_r.jpg", upright:"Traditional: will, skill, manifestation. Inner reading: focus turns scattered sparks into a flame. Choose one intention and channel everything there. Gentle prompt: What single action today would make the rest easier or irrelevant?", reversed:"Traditional: manipulation, untapped potential, misalignment. Inner reading: your energy leaks in too many directions. Re-center before acting. Gentle prompt: What will you lovingly set down so your yes can be wholehearted?" },
-  { key:"major_02", name:"The High Priestess (2)", imgUpright:"/images/major_02_u.jpg", imgReversed:"/images/major_02_r.jpg", upright:"Traditional: intuition, mystery, inner knowing. Inner reading: the quiet answer is already present. Make room to hear it. Gentle prompt: Where can you choose silence over seeking more input?", reversed:"Traditional: secrets, blocked intuition, surface noise. Inner reading: you’re scrolling past the whisper. Reduce noise, then listen again. Gentle prompt: What boundary could protect your inner yes/no today?" },
-  { key:"major_03", name:"The Empress (3)", imgUpright:"/images/major_03_u.jpg", imgReversed:"/images/major_03_r.jpg", upright:"Traditional: abundance, nurture, creation. Inner reading: softness grows results. Tend what’s alive rather than forcing growth. Gentle prompt: What would supporting your body make possible for your mind today?", reversed:"Traditional: creative block, overgiving, neglect. Inner reading: generosity needs roots. Refill first, then share. Gentle prompt: Where do you need to mother yourself before mothering the world?" },
-  { key:"major_04", name:"The Emperor (4)", imgUpright:"/images/major_04_u.jpg", imgReversed:"/images/major_04_r.jpg", upright:"Traditional: structure, authority, boundaries. Inner reading: stability is a kindness. Name the rule that frees you. Gentle prompt: What simple system would remove friction for the next week?", reversed:"Traditional: rigidity, control, rebellion. Inner reading: control protects anxiety, not truth. Switch from force to framework. Gentle prompt: What rule can be softened without losing safety?" },
-  { key:"major_05", name:"The Hierophant (5)", imgUpright:"/images/major_05_u.jpg", imgReversed:"/images/major_05_r.jpg", upright:"Traditional: tradition, teaching, shared values. Inner reading: learn the form before you rewrite it. Gentle prompt: What trustworthy source or ritual could ground you today?", reversed:"Traditional: nonconformity, dogma questioned. Inner reading: it’s time to keep the meaning and release the rule. Gentle prompt: Which inherited belief no longer serves your living truth?" },
-  { key:"major_06", name:"The Lovers (6)", imgUpright:"/images/major_06_u.jpg", imgReversed:"/images/major_06_r.jpg", upright:"Traditional: union, choice, values alignment. Inner reading: choose the path that chooses you back. Gentle prompt: Which option deepens self-respect even if it’s harder?", reversed:"Traditional: misalignment, indecision, disharmony. Inner reading: when values blur, choices stall. Re-choose your why. Gentle prompt: What value of yours wants to be honored first?" },
-  { key:"major_07", name:"The Chariot (7)", imgUpright:"/images/major_07_u.jpg", imgReversed:"/images/major_07_r.jpg", upright:"Traditional: determination, direction, victory. Inner reading: well-held opposites move you forward. Gentle prompt: What two impulses can you harness toward the same aim?", reversed:"Traditional: lack of control, drift, force without focus. Inner reading: speed without aim is stress. Gentle prompt: What destination would make saying no easier today?" },
-  { key:"major_08", name:"Strength (8)", imgUpright:"/images/major_08_u.jpg", imgReversed:"/images/major_08_r.jpg", upright:"Traditional: courage, patience, gentle power. Inner reading: kindness tames what force provokes. Gentle prompt: Where can you greet fear with warmth and stay?", reversed:"Traditional: self-doubt, fragility, harshness. Inner reading: inner critic is tired, not wise. Gentle prompt: What phrase would a loving friend offer you right now?" },
-  { key:"major_09", name:"The Hermit (9)", imgUpright:"/images/major_09_u.jpg", imgReversed:"/images/major_09_r.jpg", upright:"Traditional: introspection, wisdom, solitude. Inner reading: step out to step within. Gentle prompt: What small retreat (10 minutes) would help you hear your own voice?", reversed:"Traditional: isolation, avoidance, withdrawal. Inner reading: alone has become hiding. Re-enter gently. Gentle prompt: Who is a safe person to share one honest sentence with?" },
-  { key:"major_10", name:"Wheel of Fortune (10)", imgUpright:"/images/major_10_u.jpg", imgReversed:"/images/major_10_r.jpg", upright:"Traditional: cycles, luck, turning points. Inner reading: what’s changing is not random—participate. Gentle prompt: What tiny lever can you pull to meet the turning with grace?", reversed:"Traditional: resistance to change, stagnation. Inner reading: clinging jams the wheel. Gentle prompt: What expectation can you release to let movement return?" },
-  { key:"major_11", name:"Justice (11)", imgUpright:"/images/major_11_u.jpg", imgReversed:"/images/major_11_r.jpg", upright:"Traditional: truth, fairness, cause/effect. Inner reading: integrity simplifies decisions. Gentle prompt: What is the honest fact you’re ready to act on?", reversed:"Traditional: imbalance, denial, unfairness. Inner reading: avoidance has a cost. Repair is available. Gentle prompt: What small amends or boundary would restore balance?" },
-  { key:"major_12", name:"The Hanged Man (12)", imgUpright:"/images/major_12_u.jpg", imgReversed:"/images/major_12_r.jpg", upright:"Traditional: surrender, new perspective, pause. Inner reading: not moving is the move. Gentle prompt: What can you release to see this from a kinder angle?", reversed:"Traditional: stalling, martyrdom, stuckness. Inner reading: waiting has become avoiding. Gentle prompt: What decision would free your energy even if imperfect?" },
-  { key:"major_13", name:"Death (13)", imgUpright:"/images/major_13_u.jpg", imgReversed:"/images/major_13_r.jpg", upright:"Traditional: endings, transformation, renewal. Inner reading: closing is a devotion to what’s alive. Gentle prompt: What are you lovingly finishing so new growth can begin?", reversed:"Traditional: fear of change, stagnation, decay. Inner reading: you’re carrying what’s complete. Gentle prompt: What gentle goodbye would honor both what was and who you are now?" },
-  { key:"major_14", name:"Temperance (14)", imgUpright:"/images/major_14_u.jpg", imgReversed:"/images/major_14_r.jpg", upright:"Traditional: harmony, moderation, integration. Inner reading: mix, don’t swing. Gentle prompt: What would 10% more balance look like today?", reversed:"Traditional: excess, extremes, imbalance. Inner reading: the pendulum is tired. Gentle prompt: What is one middle step between too much and too little?" },
-  { key:"major_15", name:"The Devil (15)", imgUpright:"/images/major_15_u.jpg", imgReversed:"/images/major_15_r.jpg", upright:"Traditional: attachment, temptation, shadow patterns. Inner reading: you’re not trapped—the chain is unlatched. Gentle prompt: What comfort is costing you clarity, and how could you soothe differently?", reversed:"Traditional: release, reclaiming power, detachment. Inner reading: the spell breaks when named. Gentle prompt: What tiny act of freedom could you gift yourself today?" },
-  { key:"major_16", name:"The Tower (16)", imgUpright:"/images/major_16_u.jpg", imgReversed:"/images/major_16_r.jpg", upright:"Traditional: upheaval, revelation, breakdown. Inner reading: truth clears false structures. Gentle prompt: What honesty would you rather face than keep balancing rubble?", reversed:"Traditional: fear of change, delayed collapse. Inner reading: gentle demolition beats sudden shock. Gentle prompt: What can you dismantle kindly before it falls loudly?" },
-  { key:"major_17", name:"The Star (17)", imgUpright:"/images/major_17_u.jpg", imgReversed:"/images/major_17_r.jpg", upright:"Traditional: hope, healing, openness. Inner reading: tenderness is strength. Gentle prompt: Where can you be 5% more receptive to support or grace?", reversed:"Traditional: doubt, cynicism, dimmed faith. Inner reading: hope needs care, not proof. Gentle prompt: What tiny sign of life can you water today?" },
-  { key:"major_18", name:"The Moon (18)", imgUpright:"/images/major_18_u.jpg", imgReversed:"/images/major_18_r.jpg", upright:"Traditional: dreams, intuition, the unknown. Inner reading: walk by feel; clarity is dawning. Gentle prompt: What feeling deserves a name before a plan?", reversed:"Traditional: confusion lifting, fears examined. Inner reading: test the story with one fact. Gentle prompt: What assumption can you kindly verify?" },
-  { key:"major_19", name:"The Sun (19)", imgUpright:"/images/major_19_u.jpg", imgReversed:"/images/major_19_r.jpg", upright:"Traditional: joy, vitality, clarity. Inner reading: life wants to warm you. Gentle prompt: What simple pleasure could you allow without earning it first?", reversed:"Traditional: temporary clouds, subdued optimism. Inner reading: the light is present but blocked. Gentle prompt: What small action would let more light in today?" },
-  { key:"major_20", name:"Judgement (20)", imgUpright:"/images/major_20_u.jpg", imgReversed:"/images/major_20_r.jpg", upright:"Traditional: awakening, forgiveness, calling. Inner reading: answer the inner trumpet. Gentle prompt: What truth are you ready to rise to without punishing your past self?", reversed:"Traditional: self-doubt, delay, harsh self-judgment. Inner reading: you don’t need a verdict to begin again. Gentle prompt: What compassionate reframe would let you step forward now?" },
-  { key:"major_21", name:"The World (21)", imgUpright:"/images/major_21_u.jpg", imgReversed:"/images/major_21_r.jpg", upright:"Traditional: completion, wholeness, integration. Inner reading: the cycle closes; you have become the lesson. Gentle prompt: What celebration or closure ritual would honor this finish?", reversed:"Traditional: almost there, loose ends, delay. Inner reading: one stitch remains. Gentle prompt: What final tidy action would free you to begin the next chapter cleanly?" },
+  (function(){
+    const resultEl = document.getElementById('result');
+    const imgEl = document.getElementById('cardImg');
+    const titleEl = document.getElementById('cardTitle');
+    const badgeEl = document.getElementById('poseBadge');
+    const descEl = document.getElementById('cardDesc');
+    const warnEl = document.getElementById('deckWarning');
 
-  // === Wands ===
-  { key:"wands_ace", name:"Ace of Wands", imgUpright:"/images/wands_ace_u.jpg", imgReversed:"/images/wands_ace_r.jpg", upright:"Traditional: inspiration, potential, fire begins. Inner reading: the spark wants oxygen. Gentle prompt: What excites you enough to start even without clarity?", reversed:"Traditional: false start, blocked passion. Inner reading: desire dimmed by overthinking. Gentle prompt: What would rekindle curiosity gently today?" },
-  { key:"wands_02", name:"Two of Wands", imgUpright:"/images/wands_02_u.jpg", imgReversed:"/images/wands_02_r.jpg", upright:"Traditional: planning, vision, foresight. Inner reading: dream meets structure. Gentle prompt: What plan can you outline without killing the joy?", reversed:"Traditional: fear of the unknown, indecision. Inner reading: waiting for certainty freezes creation. Gentle prompt: What partial path could you test safely now?" },
-  { key:"wands_03", name:"Three of Wands", imgUpright:"/images/wands_03_u.jpg", imgReversed:"/images/wands_03_r.jpg", upright:"Traditional: expansion, foresight, momentum. Inner reading: effort wants distance to mature. Gentle prompt: What ongoing project needs patience, not more input?", reversed:"Traditional: delays, obstacles. Inner reading: your ship will dock when you stop pacing the shore. Gentle prompt: Where can you trust process over control?" },
-  { key:"wands_04", name:"Four of Wands", imgUpright:"/images/wands_04_u.jpg", imgReversed:"/images/wands_04_r.jpg", upright:"Traditional: celebration, foundation, harmony. Inner reading: pause to witness stability. Gentle prompt: What deserves gratitude before you rush ahead?", reversed:"Traditional: tension at home, unfinished success. Inner reading: joy postponed by expectation. Gentle prompt: What small celebration can you allow even if it’s imperfect?" },
-  { key:"wands_05", name:"Five of Wands", imgUpright:"/images/wands_05_u.jpg", imgReversed:"/images/wands_05_r.jpg", upright:"Traditional: competition, conflict, testing ideas. Inner reading: friction sharpens clarity. Gentle prompt: What disagreement is actually revealing your values?", reversed:"Traditional: avoidance of conflict, scattered goals. Inner reading: peace through numbness isn’t peace. Gentle prompt: Where can you assert gently but firmly?" },
-  { key:"wands_06", name:"Six of Wands", imgUpright:"/images/wands_06_u.jpg", imgReversed:"/images/wands_06_r.jpg", upright:"Traditional: victory, recognition, progress. Inner reading: let yourself feel seen. Gentle prompt: What compliment or feedback could you accept fully today?", reversed:"Traditional: ego, doubt, private win. Inner reading: you’re achieving quietly—honor that. Gentle prompt: How can you celebrate growth without audience?" },
-  { key:"wands_07", name:"Seven of Wands", imgUpright:"/images/wands_07_u.jpg", imgReversed:"/images/wands_07_r.jpg", upright:"Traditional: defense, conviction, standing ground. Inner reading: boundaries protect energy. Gentle prompt: What’s worth protecting calmly, not defensively?", reversed:"Traditional: exhaustion, overwhelm, yielding. Inner reading: constant defense drains joy. Gentle prompt: Where can you lay arms down and rest?" },
-  { key:"wands_08", name:"Eight of Wands", imgUpright:"/images/wands_08_u.jpg", imgReversed:"/images/wands_08_r.jpg", upright:"Traditional: speed, movement, messages. Inner reading: flow has found you—don’t oversteer. Gentle prompt: What can you ride instead of control?", reversed:"Traditional: delays, miscommunication. Inner reading: pause refines direction. Gentle prompt: What signal needs clarity before action resumes?" },
-  { key:"wands_09", name:"Nine of Wands", imgUpright:"/images/wands_09_u.jpg", imgReversed:"/images/wands_09_r.jpg", upright:"Traditional: resilience, persistence. Inner reading: tired isn’t failure. Gentle prompt: What support would let you finish without burnout?", reversed:"Traditional: fatigue, paranoia, giving up. Inner reading: rest refuels bravery. Gentle prompt: What can wait until you’re restored?" },
-  { key:"wands_10", name:"Ten of Wands", imgUpright:"/images/wands_10_u.jpg", imgReversed:"/images/wands_10_r.jpg", upright:"Traditional: burden, responsibility. Inner reading: effort needs delegation. Gentle prompt: Which load was never yours to carry?", reversed:"Traditional: release, burnout, simplification. Inner reading: drop one task to revive joy. Gentle prompt: What can you kindly let go today?" },
-  { key:"wands_page", name:"Page of Wands", imgUpright:"/images/wands_page_u.jpg", imgReversed:"/images/wands_page_r.jpg", upright:"Traditional: enthusiasm, discovery, exploration. Inner reading: curiosity is sacred. Gentle prompt: What experiment would make you feel alive again?", reversed:"Traditional: distraction, immaturity. Inner reading: chasing sparks scatters warmth. Gentle prompt: What could you finish before starting new?" },
-  { key:"wands_knight", name:"Knight of Wands", imgUpright:"/images/wands_knight_u.jpg", imgReversed:"/images/wands_knight_r.jpg", upright:"Traditional: passion, action, adventure. Inner reading: move boldly, check impulse later. Gentle prompt: What mission ignites your courage today?", reversed:"Traditional: impulsiveness, burnout. Inner reading: direction before drive. Gentle prompt: What is worth slowing down for without losing momentum?" },
-  { key:"wands_queen", name:"Queen of Wands", imgUpright:"/images/wands_queen_u.jpg", imgReversed:"/images/wands_queen_r.jpg", upright:"Traditional: confidence, magnetism, determination. Inner reading: your presence inspires. Gentle prompt: Where can you take up space unapologetically?", reversed:"Traditional: insecurity, jealousy, dampened spirit. Inner reading: inner flame needs air, not proof. Gentle prompt: What small act of self-trust could relight it?" },
-  { key:"wands_king", name:"King of Wands", imgUpright:"/images/wands_king_u.jpg", imgReversed:"/images/wands_king_r.jpg", upright:"Traditional: leadership, vision, charisma. Inner reading: guide, don’t grab. Gentle prompt: Who could you empower rather than direct today?", reversed:"Traditional: arrogance, impulsiveness. Inner reading: vision lost humility. Gentle prompt: What outcome can you release control over to regain integrity?" },
+    function getDeck(){ return Array.isArray(window.DECK) ? window.DECK : null; }
+    function rand(n){ return Math.floor(Math.random()*n); }
 
-  // === Cups ===
-  { key:"cups_ace", name:"Ace of Cups", imgUpright:"/images/cups_ace_u.jpg", imgReversed:"/images/cups_ace_r.jpg", upright:"Traditional: love, new feelings, compassion. Inner reading: the heart overflows when noticed. Gentle prompt: Where can you allow softness without self-judgment?", reversed:"Traditional: blocked emotion, repression. Inner reading: numbness guards pain and joy alike. Gentle prompt: What emotion needs permission to exist today?" },
-  { key:"cups_02", name:"Two of Cups", imgUpright:"/images/cups_02_u.jpg", imgReversed:"/images/cups_02_r.jpg", upright:"Traditional: connection, harmony, partnership. Inner reading: mutual respect nourishes both sides. Gentle prompt: How can you show appreciation without expecting return?", reversed:"Traditional: imbalance, tension, disconnection. Inner reading: honesty is care. Gentle prompt: What truth, kindly spoken, could refresh this bond?" },
-  { key:"cups_03", name:"Three of Cups", imgUpright:"/images/cups_03_u.jpg", imgReversed:"/images/cups_03_r.jpg", upright:"Traditional: friendship, community, celebration. Inner reading: joy multiplies when shared. Gentle prompt: Who could you thank or celebrate with today?", reversed:"Traditional: gossip, isolation, overindulgence. Inner reading: belonging doesn’t require performance. Gentle prompt: What circle truly feels like home?" },
-  { key:"cups_04", name:"Four of Cups", imgUpright:"/images/cups_04_u.jpg", imgReversed:"/images/cups_04_r.jpg", upright:"Traditional: apathy, contemplation. Inner reading: rest, not boredom, may be needed. Gentle prompt: What small pleasure are you overlooking?", reversed:"Traditional: new interest, awareness. Inner reading: heart reawakens softly. Gentle prompt: What curiosity feels like a tiny yes?" },
-  { key:"cups_05", name:"Five of Cups", imgUpright:"/images/cups_05_u.jpg", imgReversed:"/images/cups_05_r.jpg", upright:"Traditional: loss, grief, regret. Inner reading: sorrow honored turns to wisdom. Gentle prompt: What remains standing behind you?", reversed:"Traditional: acceptance, forgiveness. Inner reading: healing sneaks in through attention. Gentle prompt: What would forgiving yourself make possible?" },
-  { key:"cups_06", name:"Six of Cups", imgUpright:"/images/cups_06_u.jpg", imgReversed:"/images/cups_06_r.jpg", upright:"Traditional: nostalgia, kindness, childhood. Inner reading: innocence isn’t ignorance. Gentle prompt: What simple joy from your past could comfort you today?", reversed:"Traditional: stuck in the past, unrealistic longing. Inner reading: memories soothe, but can trap. Gentle prompt: What part of yesterday still teaches without holding you?" },
-  { key:"cups_07", name:"Seven of Cups", imgUpright:"/images/cups_07_u.jpg", imgReversed:"/images/cups_07_r.jpg", upright:"Traditional: choices, imagination, illusion. Inner reading: every fantasy is a message of need. Gentle prompt: Which dream still feels grounded in truth?", reversed:"Traditional: clarity, decision. Inner reading: discernment is love. Gentle prompt: Which option aligns with peace, not thrill?" },
-  { key:"cups_08", name:"Eight of Cups", imgUpright:"/images/cups_08_u.jpg", imgReversed:"/images/cups_08_r.jpg", upright:"Traditional: walking away, deeper meaning. Inner reading: departures are sacred too. Gentle prompt: What chapter feels complete enough to release?", reversed:"Traditional: fear of change, avoidance. Inner reading: holding on delays becoming. Gentle prompt: What small goodbye would create breathing room?" },
-  { key:"cups_09", name:"Nine of Cups", imgUpright:"/images/cups_09_u.jpg", imgReversed:"/images/cups_09_r.jpg", upright:"Traditional: satisfaction, wish fulfillment. Inner reading: contentment blooms quietly. Gentle prompt: What is already enough right now?", reversed:"Traditional: superficial happiness, indulgence. Inner reading: joy borrowed from excess fades fast. Gentle prompt: What deeper fulfillment waits beneath comfort?" },
-  { key:"cups_10", name:"Ten of Cups", imgUpright:"/images/cups_10_u.jpg", imgReversed:"/images/cups_10_r.jpg", upright:"Traditional: harmony, family, joy. Inner reading: gratitude seals the moment. Gentle prompt: How can you express love simply today?", reversed:"Traditional: discord, unrealistic ideals. Inner reading: expectations cloud gratitude. Gentle prompt: What ‘perfect picture’ can you release for peace?" },
-  { key:"cups_page", name:"Page of Cups", imgUpright:"/images/cups_page_u.jpg", imgReversed:"/images/cups_page_r.jpg", upright:"Traditional: curiosity, sensitivity, intuition. Inner reading: imagination heals. Gentle prompt: What small wonder can you listen to with your heart?", reversed:"Traditional: immaturity, escapism. Inner reading: fantasy defends tenderness. Gentle prompt: How can you protect your dream by grounding it?" },
-  { key:"cups_knight", name:"Knight of Cups", imgUpright:"/images/cups_knight_u.jpg", imgReversed:"/images/cups_knight_r.jpg", upright:"Traditional: romance, creativity, pursuit of beauty. Inner reading: idealism fuels art and love. Gentle prompt: What vision feels worth pursuing with grace?", reversed:"Traditional: moodiness, disappointment. Inner reading: the muse needs consistency, not perfection. Gentle prompt: How can you nurture beauty without demanding brilliance?" },
-  { key:"cups_queen", name:"Queen of Cups", imgUpright:"/images/cups_queen_u.jpg", imgReversed:"/images/cups_queen_r.jpg", upright:"Traditional: compassion, intuition, calm. Inner reading: your empathy is strength. Gentle prompt: How can you care without absorbing others’ storms?", reversed:"Traditional: codependency, overwhelm. Inner reading: boundaries are compassion too. Gentle prompt: What emotion is yours to keep, and what isn’t?" },
-  { key:"cups_king", name:"King of Cups", imgUpright:"/images/cups_king_u.jpg", imgReversed:"/images/cups_king_r.jpg", upright:"Traditional: emotional balance, diplomacy, wisdom. Inner reading: calm presence stabilizes all. Gentle prompt: How can you lead with steadiness, not suppression?", reversed:"Traditional: manipulation, detachment. Inner reading: bottled emotion blocks trust. Gentle prompt: What feeling needs honest expression?" },
+    function draw(){
+      const DECK = getDeck();
+      if(!DECK || !DECK.length){ warnEl.style.display = 'block'; return; }
+      warnEl.style.display = 'none';
 
-  // === Swords ===
-  { key:"swords_ace", name:"Ace of Swords", imgUpright:"/images/swords_ace_u.jpg", imgReversed:"/images/swords_ace_r.jpg", upright:"Traditional: clarity, truth, new ideas. Inner reading: mental light cuts through fog. Gentle prompt: What truth wants clear words today?", reversed:"Traditional: confusion, misinformation. Inner reading: the mind’s noise isn’t knowledge. Gentle prompt: What belief could you fact-check kindly?" },
-  { key:"swords_02", name:"Two of Swords", imgUpright:"/images/swords_02_u.jpg", imgReversed:"/images/swords_02_r.jpg", upright:"Traditional: decision, balance, stalemate. Inner reading: pause brings wisdom. Gentle prompt: What fact would make the next step clear?", reversed:"Traditional: indecision, overload. Inner reading: choice postponed grows heavier. Gentle prompt: What small decision breaks the freeze?" },
-  { key:"swords_03", name:"Three of Swords", imgUpright:"/images/swords_03_u.jpg", imgReversed:"/images/swords_03_r.jpg", upright:"Traditional: heartbreak, sorrow, release. Inner reading: pain named heals faster. Gentle prompt: What hurt still wants acknowledgment, not fixing?", reversed:"Traditional: recovery, forgiveness. Inner reading: scar tissue is strength. Gentle prompt: How can you thank your heart for healing?" },
-  { key:"swords_04", name:"Four of Swords", imgUpright:"/images/swords_04_u.jpg", imgReversed:"/images/swords_04_r.jpg", upright:"Traditional: rest, recovery, contemplation. Inner reading: pause is power. Gentle prompt: What would one hour of genuine rest restore?", reversed:"Traditional: burnout, restlessness. Inner reading: recovery delayed deepens fatigue. Gentle prompt: What boundary protects your quiet?" },
-  { key:"swords_05", name:"Five of Swords", imgUpright:"/images/swords_05_u.jpg", imgReversed:"/images/swords_05_r.jpg", upright:"Traditional: conflict, tension, hollow victory. Inner reading: winning alone isn’t winning. Gentle prompt: What peace is worth more than proving right?", reversed:"Traditional: reconciliation, learning. Inner reading: humility repairs bridges. Gentle prompt: What apology or release brings relief?" },
-  { key:"swords_06", name:"Six of Swords", imgUpright:"/images/swords_06_u.jpg", imgReversed:"/images/swords_06_r.jpg", upright:"Traditional: transition, healing journey. Inner reading: distance brings perspective. Gentle prompt: What calm horizon are you rowing toward?", reversed:"Traditional: difficulty moving on. Inner reading: closure needs courage. Gentle prompt: What would make leaving kinder?" },
-  { key:"swords_07", name:"Seven of Swords", imgUpright:"/images/swords_07_u.jpg", imgReversed:"/images/swords_07_r.jpg", upright:"Traditional: strategy, secrecy, cunning. Inner reading: discernment saves energy. Gentle prompt: Where is honesty the easier path now?", reversed:"Traditional: confession, truth revealed. Inner reading: vulnerability is liberation. Gentle prompt: What truth would free you today?" },
-  { key:"swords_08", name:"Eight of Swords", imgUpright:"/images/swords_08_u.jpg", imgReversed:"/images/swords_08_r.jpg", upright:"Traditional: restriction, self-limitation. Inner reading: fear writes rules. Gentle prompt: What assumption could you test safely?", reversed:"Traditional: freedom, empowerment. Inner reading: you see the unlocked gate. Gentle prompt: What step turns awareness into action?" },
-  { key:"swords_09", name:"Nine of Swords", imgUpright:"/images/swords_09_u.jpg", imgReversed:"/images/swords_09_r.jpg", upright:"Traditional: anxiety, nightmares, worry. Inner reading: mind rehearses pain to stay safe. Gentle prompt: What fear can you comfort, not fight, tonight?", reversed:"Traditional: healing, perspective. Inner reading: dawn breaks after rumination. Gentle prompt: What evidence of safety can you name?" },
-  { key:"swords_10", name:"Ten of Swords", imgUpright:"/images/swords_10_u.jpg", imgReversed:"/images/swords_10_r.jpg", upright:"Traditional: endings, defeat, collapse. Inner reading: rock bottom is solid ground. Gentle prompt: What truth ends the cycle kindly?", reversed:"Traditional: recovery, regeneration. Inner reading: sunrise after surrender. Gentle prompt: What new strength is forming beneath the ache?" },
-  { key:"swords_page", name:"Page of Swords", imgUpright:"/images/swords_page_u.jpg", imgReversed:"/images/swords_page_r.jpg", upright:"Traditional: curiosity, communication, ideas. Inner reading: questions sharpen wisdom. Gentle prompt: What topic excites your learning mind?", reversed:"Traditional: gossip, defensiveness. Inner reading: fear hides behind logic. Gentle prompt: What question could you ask instead of argue?" },
-  { key:"swords_knight", name:"Knight of Swords", imgUpright:"/images/swords_knight_u.jpg", imgReversed:"/images/swords_knight_r.jpg", upright:"Traditional: ambition, drive, action. Inner reading: courage with focus changes outcomes. Gentle prompt: Where does urgency serve clarity today?", reversed:"Traditional: impulsiveness, chaos. Inner reading: speed blurs truth. Gentle prompt: What would slowing down reveal?" },
-  { key:"swords_queen", name:"Queen of Swords", imgUpright:"/images/swords_queen_u.jpg", imgReversed:"/images/swords_queen_r.jpg", upright:"Traditional: intellect, honesty, perception. Inner reading: clarity is compassion. Gentle prompt: How can you speak truth with warmth?", reversed:"Traditional: coldness, bitterness. Inner reading: logic needs heart to guide it. Gentle prompt: What softness could accompany your truth?" },
-  { key:"swords_king", name:"King of Swords", imgUpright:"/images/swords_king_u.jpg", imgReversed:"/images/swords_king_r.jpg", upright:"Traditional: reason, authority, wisdom. Inner reading: clarity commands respect. Gentle prompt: What decision aligns with logic and integrity?", reversed:"Traditional: misuse of power, manipulation. Inner reading: intellect without empathy wounds. Gentle prompt: What fact have you used as armor instead of bridge?" },
+      const card = DECK[rand(DECK.length)];
+      const reversed = Math.random() < 0.5;
 
-  // === Pentacles ===
-  { key:"pent_ace", name:"Ace of Pentacles", imgUpright:"/images/pent_ace_u.jpg", imgReversed:"/images/pent_ace_r.jpg", upright:"Traditional: opportunity, prosperity, new job. Inner reading: foundation forming. Gentle prompt: What small action plants a sustainable seed?", reversed:"Traditional: missed chance, instability. Inner reading: slow growth is still growth. Gentle prompt: What resource can you repurpose instead of replace?" },
-  { key:"pent_02", name:"Two of Pentacles", imgUpright:"/images/pent_02_u.jpg", imgReversed:"/images/pent_02_r.jpg", upright:"Traditional: balance, adaptability. Inner reading: life is a rhythm, not a spreadsheet. Gentle prompt: What can you juggle with more playfulness?", reversed:"Traditional: imbalance, overload. Inner reading: balls drop when rest is skipped. Gentle prompt: What task can be postponed kindly?" },
-  { key:"pent_03", name:"Three of Pentacles", imgUpright:"/images/pent_03_u.jpg", imgReversed:"/images/pent_03_r.jpg", upright:"Traditional: teamwork, craftsmanship. Inner reading: collaboration polishes creation. Gentle prompt: Who could refine your idea with you?", reversed:"Traditional: disharmony, poor coordination. Inner reading: pride blocks learning. Gentle prompt: How can you invite feedback without fear?" },
-  { key:"pent_04", name:"Four of Pentacles", imgUpright:"/images/pent_04_u.jpg", imgReversed:"/images/pent_04_r.jpg", upright:"Traditional: control, security. Inner reading: safety sometimes constricts flow. Gentle prompt: What resource could you share without threat?", reversed:"Traditional: greed, release, generosity. Inner reading: giving reopens circulation. Gentle prompt: What small act of trust feels brave today?" },
-  { key:"pent_05", name:"Five of Pentacles", imgUpright:"/images/pent_05_u.jpg", imgReversed:"/images/pent_05_r.jpg", upright:"Traditional: hardship, exclusion, poverty. Inner reading: need is temporary, worth is not. Gentle prompt: Who could you reach for support or warmth?", reversed:"Traditional: recovery, hope, help received. Inner reading: asking is strength. Gentle prompt: What help can you gratefully accept today?" },
-  { key:"pent_06", name:"Six of Pentacles", imgUpright:"/images/pent_06_u.jpg", imgReversed:"/images/pent_06_r.jpg", upright:"Traditional: generosity, giving and receiving. Inner reading: balance charity and dignity. Gentle prompt: Where can you give or receive without guilt?", reversed:"Traditional: debt, inequality. Inner reading: resentment distorts exchange. Gentle prompt: What boundary keeps giving clean?" },
-  { key:"pent_07", name:"Seven of Pentacles", imgUpright:"/images/pent_07_u.jpg", imgReversed:"/images/pent_07_r.jpg", upright:"Traditional: patience, investment, waiting. Inner reading: growth hides underground. Gentle prompt: What effort will you trust to mature unseen?", reversed:"Traditional: impatience, wasted effort. Inner reading: reevaluate, don’t abandon. Gentle prompt: What deserves pruning instead of quitting?" },
-  { key:"pent_08", name:"Eight of Pentacles", imgUpright:"/images/pent_08_u.jpg", imgReversed:"/images/pent_08_r.jpg", upright:"Traditional: mastery, diligence, craft. Inner reading: devotion builds identity. Gentle prompt: What skill feels sacred through repetition?", reversed:"Traditional: burnout, lack of focus. Inner reading: perfection erases joy. Gentle prompt: How can you reintroduce curiosity to your work?" },
-  { key:"pent_09", name:"Nine of Pentacles", imgUpright:"/images/pent_09_u.jpg", imgReversed:"/images/pent_09_r.jpg", upright:"Traditional: independence, luxury, gratitude. Inner reading: contentment is earned rest. Gentle prompt: How can you enjoy your garden before expanding it?", reversed:"Traditional: self-worth issues, overwork. Inner reading: achievement without presence is hollow. Gentle prompt: What comfort can you allow guilt-free?" },
-  { key:"pent_10", name:"Ten of Pentacles", imgUpright:"/images/pent_10_u.jpg", imgReversed:"/images/pent_10_r.jpg", upright:"Traditional: legacy, wealth, stability. Inner reading: you stand in a continuum. Gentle prompt: What tradition or gift will you pass forward?", reversed:"Traditional: instability, financial tension. Inner reading: legacy is built on values, not numbers. Gentle prompt: What non-material wealth already surrounds you?" },
-  { key:"pent_page", name:"Page of Pentacles", imgUpright:"/images/pent_page_u.jpg", imgReversed:"/images/pent_page_r.jpg", upright:"Traditional: ambition, study, opportunity. Inner reading: curiosity meets earth. Gentle prompt: What skill would you enjoy growing patiently?", reversed:"Traditional: lack of progress, laziness. Inner reading: distraction masks fatigue. Gentle prompt: How can you learn through rest first?" },
-  { key:"pent_knight", name:"Knight of Pentacles", imgUpright:"/images/pent_knight_u.jpg", imgReversed:"/images/pent_knight_r.jpg", upright:"Traditional: hard work, reliability. Inner reading: slow rhythm wins long races. Gentle prompt: What routine brings quiet pride?", reversed:"Traditional: stagnation, routine fatigue. Inner reading: duty without meaning dulls spirit. Gentle prompt: What ritual could you refresh or release?" },
-  { key:"pent_queen", name:"Queen of Pentacles", imgUpright:"/images/pent_queen_u.jpg", imgReversed:"/images/pent_queen_r.jpg", upright:"Traditional: nurturing, practicality, security. Inner reading: abundance multiplies through care. Gentle prompt: How can you make your home feel more supportive today?", reversed:"Traditional: imbalance, self-neglect. Inner reading: caregiver needs tending too. Gentle prompt: What personal need deserves time on the schedule?" },
-  { key:"pent_king", name:"King of Pentacles", imgUpright:"/images/pent_king_u.jpg", imgReversed:"/images/pent_king_r.jpg", upright:"Traditional: success, leadership, stability. Inner reading: stewardship over ownership. Gentle prompt: What structure will let generosity outlast you?", reversed:"Traditional: greed, rigidity, insecurity. Inner reading: control fears loss. Gentle prompt: Where could you trust process instead of tighten grip?" }
-];
+      const imgSrc = reversed ? (card.imgReversed || card.imgUpright) : (card.imgUpright || card.imgReversed);
+      const text = reversed ? (card.reversedLong || card.reversed || '') : (card.uprightLong || card.upright || '');
 
-    const $ = (id)=>document.getElementById(id);
-    const drawBtn=$("drawBtn"),resetBtn=$("resetBtn"),panel=$("result"),imgEl=$("cardImg"),titleEl=$("cardTitle"),descEl=$("cardDesc"),badgeEl=$("poseBadge"),idxEl=$("index");
+      if(imgSrc){ imgEl.src = imgSrc; imgEl.alt = `${card.name} — ${reversed ? 'Reversed' : 'Upright'}`; }
+      titleEl.textContent = card?.name || 'Unknown Card';
+      badgeEl.textContent = reversed ? 'Reversed' : 'Upright';
+      descEl.textContent = text || '—';
 
-    function randomInt(max){return Math.floor(Math.random()*max)}
-
-    function drawCard(){
-      const card=DECK[randomInt(DECK.length)];
-      const reversed=Math.random()<0.5;
-      titleEl.textContent=card.name+(reversed?" (Reversed)":"");
-      badgeEl.textContent=reversed?"Reversed":"Upright";
-      descEl.textContent=reversed?card.reversed:card.upright;
-      imgEl.src=reversed?card.imgReversed:card.imgUpright;
-      imgEl.alt=card.name+(reversed?" reversed":" upright");
-      idxEl.textContent=`#${DECK.indexOf(card)+1} of ${DECK.length}`;
-      panel.style.display="block";drawBtn.disabled=true;resetBtn.disabled=false;
+      resultEl.style.display = 'block';
+      // Scroll result into view on mobile after draw
+      setTimeout(()=>{ resultEl.scrollIntoView({ behavior:'smooth', block:'start' }); }, 0);
     }
 
-    function reset(){panel.style.display="none";imgEl.src="";titleEl.textContent="—";descEl.textContent="—";badgeEl.textContent="Upright";idxEl.textContent="";drawBtn.disabled=false;resetBtn.disabled=true;}
+    // One-button toggle behaviour
+    const btn = document.getElementById('drawBtn');
+    if(btn){
+      // Clean previous listeners in case of hot reload
+      const clone = btn.cloneNode(true);
+      btn.parentNode.replaceChild(clone, btn);
+      const drawBtn = clone;
+      drawBtn.addEventListener('click', ()=>{ draw(); drawBtn.textContent = 'Draw Again'; });
+    }
 
-    drawBtn.addEventListener("click",drawCard);
-    resetBtn.addEventListener("click",reset);
+    // Show warning if the deck is missing at load
+    if(!getDeck()) warnEl.style.display = 'block';
+  })();
   </script>
 </body>
 </html>
