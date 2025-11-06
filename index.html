@@ -2,285 +2,198 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>The Unread Cards · Deckless Generator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Unread Cards · Simple Generator</title>
   <style>
     :root{
-      --bg:#0e0e10; --panel:#141418; --text:#f4f4f6; --muted:#a8a8b3; --accent:#e6c36a; --line:#23232a;
+      --bg:#0f0f12; --panel:#15151b; --ink:#f4f4f6; --muted:#a9a9b5; --line:#24242c; --accent:#e7c56f;
     }
-    html,body{height:100%}
-    body{
-      margin:0; background:var(--bg); color:var(--text);
-      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      display:flex; align-items:center; justify-content:center; padding:24px;
-    }
-    .app{width:100%; max-width:720px; background:var(--panel); border:1px solid var(--line);
-         border-radius:20px; padding:24px 24px 18px; box-shadow:0 10px 40px rgba(0,0,0,.35)}
-    h1{margin:0 0 6px; font-size:28px; letter-spacing:.3px}
-    .sub{color:var(--muted); margin:0 0 18px; font-size:14px}
-    .controls{display:flex; gap:10px; flex-wrap:wrap; margin:10px 0 16px}
-    .btn{
-      background:#1c1c22; color:var(--text); border:1px solid var(--line);
-      padding:10px 14px; border-radius:12px; cursor:pointer; font-weight:600
-    }
-    .btn:hover{filter:brightness(1.08)}
-    .btn.primary{background:var(--accent); color:#161616; border:0}
-    .mode{display:flex; gap:8px; align-items:center; margin-top:8px; color:var(--muted)}
-    .switch{appearance:none; width:44px; height:26px; background:#22232a; border-radius:999px; position:relative; cursor:pointer; outline:none; border:1px solid var(--line)}
-    .switch:checked{background:#2b2d35}
-    .switch:before{content:""; position:absolute; top:3px; left:3px; width:20px; height:20px; border-radius:50%; background:#fff; transition:all .2s}
-    .switch:checked:before{transform:translateX(18px)}
-    .card{
-      margin:14px 0 8px; padding:18px; border-radius:16px; background:#0f0f13; border:1px solid var(--line)
-    }
-    .card-title{display:flex; align-items:center; justify-content:space-between; gap:10px}
-    .name{font-size:22px; font-weight:700}
-    .tag{font-size:12px; padding:4px 8px; border-radius:999px; background:#1d1f26; color:var(--muted); border:1px solid var(--line)}
-    .meaning{margin-top:10px; line-height:1.6; color:#e7e7ea}
-    .meta{display:flex; gap:12px; flex-wrap:wrap; margin:10px 0 0; color:var(--muted); font-size:12px}
-    .footer{display:flex; gap:10px; justify-content:space-between; align-items:center; margin-top:14px}
-    textarea{width:100%; min-height:84px; border-radius:12px; border:1px solid var(--line); background:#0c0c10; color:var(--text); padding:10px; resize:vertical}
-    .small{font-size:12px; color:var(--muted)}
-    .row{display:flex; gap:10px; flex-wrap:wrap}
-    .input{
-      background:#0c0c10; border:1px solid var(--line); color:var(--text);
-      padding:10px 12px; border-radius:10px
-    }
-    .sep{height:1px; background:var(--line); margin:16px 0}
-    .ghost{opacity:.8}
-    .hidden{display:none}
-    a.link{color:var(--accent); text-decoration:none}
-    .badge{font-size:11px; padding:4px 8px; border:1px solid var(--line); border-radius:999px; color:var(--muted)}
+    *{box-sizing:border-box}
+    body{margin:0; font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial; background:var(--bg); color:var(--ink); display:flex; min-height:100dvh; align-items:center; justify-content:center; padding:24px}
+    .app{width:100%; max-width:720px; background:var(--panel); border:1px solid var(--line); border-radius:18px; padding:22px; box-shadow:0 10px 40px rgba(0,0,0,.35)}
+    h1{margin:0 0 8px; font-size:26px}
+    p.sub{margin:0 0 16px; color:var(--muted)}
+    .controls{display:flex; gap:10px; flex-wrap:wrap; margin-bottom:16px}
+    .btn{background:#1c1c22; color:var(--ink); border:1px solid var(--line); padding:10px 14px; border-radius:12px; cursor:pointer; font-weight:600}
+    .btn.primary{background:var(--accent); color:#141414; border-color:transparent}
+    .btn:disabled{opacity:.6; cursor:not-allowed}
+    .result{display:none; border:1px solid var(--line); border-radius:14px; overflow:hidden}
+    .card-top{display:flex; gap:16px; padding:16px; background:#101015; align-items:flex-start}
+    .thumb{width:160px; aspect-ratio:3/5; background:#0b0b0f; border:1px solid var(--line); border-radius:10px; overflow:hidden; display:flex; align-items:center; justify-content:center}
+    .thumb img{width:100%; height:100%; object-fit:cover; display:block; transition:transform .2s ease}
+    .thumb img.reversed{transform:rotate(180deg)}
+    .meta{flex:1}
+    .title{font-size:22px; font-weight:800; display:flex; gap:8px; align-items:center}
+    .badge{font-size:11px; padding:4px 8px; border-radius:999px; border:1px solid var(--line); color:var(--muted)}
+    .desc{margin-top:8px; line-height:1.6}
+    .footer{padding:12px 16px; background:#0e0e12; display:flex; align-items:center; justify-content:space-between; color:var(--muted); font-size:12px}
   </style>
 </head>
 <body>
   <div class="app">
     <h1>The Unread Cards</h1>
-    <p class="sub">A deckless, web-based self-reading. Draw a card, read yourself.</p>
+    <p class="sub">Draw a single card (upright or reversed). Read yourself. Start over anytime.</p>
 
     <div class="controls">
-      <button class="btn primary" id="drawBtn">Draw Card</button>
-      <button class="btn" id="shareBtn" title="Copy a shareable link for this exact draw">Share Result</button>
-      <div class="mode">
-        <input type="checkbox" id="dailyToggle" class="switch" />
-        <label for="dailyToggle">Daily mode</label>
-        <span class="badge" id="seedBadge" title="Current seed used for the draw"></span>
+      <button id="drawBtn" class="btn primary">Draw a Card</button>
+      <button id="resetBtn" class="btn" disabled>Start Over</button>
+    </div>
+
+    <section id="result" class="result">
+      <div class="card-top">
+        <div class="thumb">
+          <!-- Add your image URL per card below via the DECK array -->
+          <img id="cardImg" alt="Card image" />
+        </div>
+        <div class="meta">
+          <div class="title">
+            <span id="cardTitle">—</span>
+            <span id="poseBadge" class="badge">Upright</span>
+          </div>
+          <div id="cardDesc" class="desc">—</div>
+        </div>
       </div>
-    </div>
-
-    <div class="row">
-      <input id="nameInput" class="input" placeholder="Optional: add your name to personalize daily seed" />
-      <select id="includeReversals" class="input">
-        <option value="auto" selected>Upright + Reversed</option>
-        <option value="upright">Upright only</option>
-      </select>
-    </div>
-
-    <div id="cardPanel" class="card hidden">
-      <div class="card-title">
-        <div class="name" id="cardName"></div>
-        <div class="tag" id="cardPose"></div>
+      <div class="footer">
+        <span id="hint">Tip: Reversed cards appear upside down to mirror inward energy.</span>
+        <span id="index" aria-hidden="true"></span>
       </div>
-      <div class="meaning" id="cardMeaning"></div>
-      <div class="meta">
-        <span id="cardIndex" class="ghost"></span>
-        <span id="cardKey" class="ghost"></span>
-      </div>
-    </div>
-
-    <div class="sep"></div>
-
-    <label for="notes" class="small">Your reflection (optional)</label>
-    <textarea id="notes" placeholder="What part of this card speaks to you today?"></textarea>
-
-    <div class="footer">
-      <div class="small">No gurus. No gatekeepers. <a class="link" href="#" id="resetLink">Clear</a></div>
-      <div class="small" id="status"></div>
-    </div>
+    </section>
   </div>
 
   <script>
-    // --- Minimal 78-card skeleton (add or edit meanings as you grow) ---
-    // Structure: { key, name, suit, arcana, upright, reversed }
-    // For brevity, a subset is fully filled; extend to all 78 later.
+    // === Minimal deck structure ===
+    // Each card has: key, name, img (URL you will add), upright (3 sentences), reversed (3 sentences)
+    // Replace the img values with your hosted images (e.g., /images/fool.jpg or https://...)
     const DECK = [
-      { key:"major_00", name:"The Fool (0)", suit:"major", arcana:"major",
-        upright:"Beginnings, openness, a step into the unknown. Where can you choose curiosity over control?",
-        reversed:"Hesitation, self-doubt, clinging to certainty. What tiny risk would move you forward today?" },
-      { key:"major_01", name:"The Magician (1)", suit:"major", arcana:"major",
-        upright:"Focus, intention, turning ideas into reality. What resource are you underusing?",
-        reversed:"Scattered energy, mixed messages. What will you stop doing to regain power?" },
-      { key:"major_02", name:"The High Priestess (2)", suit:"major", arcana:"major",
-        upright:"Inner knowing, quiet confidence. What truth grows in silence?",
-        reversed:"Noise over intuition. Where are you overriding your inner no/yes?" },
-      { key:"major_13", name:"Death (13)", suit:"major", arcana:"major",
-        upright:"Release, endings that free energy. What wants to be completed?",
-        reversed:"Avoiding change. What are you keeping alive past its time?" },
-      { key:"major_16", name:"The Tower (16)", suit:"major", arcana:"major",
-        upright:"Truth collapses what’s false. What fell—and what’s now lighter?",
-        reversed:"Fear of disruption. What would crumble if you told the truth?" },
-      { key:"major_18", name:"The Moon (18)", suit:"major", arcana:"major",
-        upright:"Uncertainty reveals deeper motives. What is unclear but alive?",
-        reversed:"Projection and confusion. What story are you ready to test against reality?" },
-      { key:"major_19", name:"The Sun (19)", suit:"major", arcana:"major",
-        upright:"Vitality, clarity, warmth. Where can you choose joy without permission?",
-        reversed:"Dulled optimism. What simple action would bring light back today?" },
-      { key:"cups_08", name:"Eight of Cups", suit:"cups", arcana:"minor",
-        upright:"Walking away to walk toward. What does your soul want you to leave?",
-        reversed:"Avoiding the leaving. What keeps you circling the same shore?" },
-      { key:"wands_07", name:"Seven of Wands", suit:"wands", arcana:"minor",
-        upright:"Boundaries, conviction. What’s worth defending without drama?",
-        reversed:"Burnout from constant defense. Where can you step off the battlefield?" },
-      { key:"swords_02", name:"Two of Swords", suit:"swords", arcana:"minor",
-        upright:"Pause, choose with eyes open. What information are you avoiding?",
-        reversed:"Stuck in indecision. What small decision unlocks the big one?" },
-      { key:"pent_07", name:"Seven of Pentacles", suit:"pentacles", arcana:"minor",
-        upright:"Patience, compounding effort. What result needs time, not force?",
-        reversed:"Impatience, misaligned labor. Where are you watering stone?" }
-      // TODO: extend to all 78 — duplicate this structure with your language & philosophy.
+      {
+        key: "major_00",
+        name: "The Fool (0)",
+        img: "", // e.g., "/images/fool.jpg"
+        upright: "Beginnings that ask for trust. Curiosity is wiser than control today. Take the lightest next step.",
+        reversed: "Hesitation holds the door shut. Perfectionism is a disguise for fear. Choose one tiny risk and move."
+      },
+      {
+        key: "major_01",
+        name: "The Magician (1)",
+        img: "",
+        upright: "Intention turns resources into results. Focus your will on one clear outcome. Name it, start it, shape it.",
+        reversed: "Scattered effort dilutes power. Say no to one thing to say yes to your craft. Align, then act."
+      },
+      {
+        key: "major_02",
+        name: "The High Priestess (2)",
+        img: "",
+        upright: "Quiet confidence grows in the dark. Listen before you move. Let silence make the path visible.",
+        reversed: "Noise drowns inner truth. Step back from opinions and metrics. Your answer is softer than you think."
+      },
+      {
+        key: "major_13",
+        name: "Death (13)",
+        img: "",
+        upright: "Completion frees energy. Honor what is ending without drama. Make room for the living thing.",
+        reversed: "Clinging turns endings into stagnation. Release the ritual of ‘almost’. Close the door gently but fully."
+      },
+      {
+        key: "major_16",
+        name: "The Tower (16)",
+        img: "",
+        upright: "Truth collapses what can’t hold it. Shock becomes clarity once named. Build on what remained honest.",
+        reversed: "Avoided change accumulates pressure. What would fall if you told the whole truth? Let it fall, then breathe."
+      },
+      {
+        key: "major_18",
+        name: "The Moon (18)",
+        img: "",
+        upright: "Uncertainty is fertile ground. Feel first, label later. Walk by feel until dawn clarifies the map.",
+        reversed: "Projection blurs the mirror. Test your story against a fact. Adjust gently until the path is real."
+      },
+      {
+        key: "major_19",
+        name: "The Sun (19)",
+        img: "",
+        upright: "Vitality returns with simplicity. Let joy be a practice, not permission. Stand where the light finds you.",
+        reversed: "Brightness is muffled, not gone. Do one small thing that warms you. Light follows attention."
+      },
+      {
+        key: "cups_08",
+        name: "Eight of Cups",
+        img: "",
+        upright: "Leaving is an act of loyalty to the self. Walk toward what calls, not what clings. Your tide is turning inward.",
+        reversed: "Circling the same shore exhausts the heart. Name the attachment and its cost. Choose the path with oxygen."
+      },
+      {
+        key: "wands_07",
+        name: "Seven of Wands",
+        img: "",
+        upright: "Hold a boundary without a speech. Defend energy, not ego. Choose your hill with care and calm.",
+        reversed: "Fighting everything becomes a lifestyle. Step off one unnecessary battlefield. Rest is also a strategy."
+      },
+      {
+        key: "swords_02",
+        name: "Two of Swords",
+        img: "",
+        upright: "A pause is intelligent, not weak. Gather the one missing fact. Decide small to unlock the big choice.",
+        reversed: "Analysis keeps the river dammed. Make a provisional choice and review later. Motion teaches what thought can’t."
+      },
+      {
+        key: "pent_07",
+        name: "Seven of Pentacles",
+        img: "",
+        upright: "Patience compounds into harvest. Water what actually grows. Progress is quiet but faithful.",
+        reversed: "Effort without alignment feels heavy. Audit where your time goes. Replant attention in fertile soil."
+      }
     ];
 
-    // --- Deterministic RNG for "Daily mode" so the same seed -> same card ---
-    function cyrb128(str){
-      let h1=1779033703, h2=3144134277, h3=1013904242, h4=2773480762;
-      for(let i=0, k; i<str.length; i++){
-        k = str.charCodeAt(i);
-        h1 = (h2 ^ Math.imul(h1 ^ k, 597399067)) >>> 0;
-        h2 = (h3 ^ Math.imul(h2 ^ k, 2869860233)) >>> 0;
-        h3 = (h4 ^ Math.imul(h3 ^ k, 951274213)) >>> 0;
-        h4 = (h1 ^ Math.imul(h4 ^ k, 2716044179)) >>> 0;
-      }
-      h1 = Math.imul(h3 ^ (h1 >>> 18), 597399067) ^ Math.imul(h4 ^ (h2 >>> 22), 2869860233);
-      h2 = Math.imul(h4 ^ (h2 >>> 18), 597399067) ^ Math.imul(h1 ^ (h3 >>> 22), 2869860233);
-      h3 = Math.imul(h1 ^ (h3 >>> 18), 597399067) ^ Math.imul(h2 ^ (h4 >>> 22), 2869860233);
-      h4 = Math.imul(h2 ^ (h4 >>> 18), 597399067) ^ Math.imul(h3 ^ (h1 >>> 22), 2869860233);
-      return [(h1^h2^h3^h4)>>>0, (h2^h3)>>>0, (h3^h4)>>>0, (h1^h4)>>>0];
-    }
-    function mulberry32(a){ return function(){ let t=a+=0x6D2B79F5; t=Math.imul(t^(t>>>15), t|1); t^=t+Math.imul(t^(t>>>7), t|61); return ((t^(t>>>14))>>>0)/4294967296; } }
+    const $ = (id) => document.getElementById(id);
+    const drawBtn = $("drawBtn");
+    const resetBtn = $("resetBtn");
+    const panel = $("result");
+    const imgEl = $("cardImg");
+    const titleEl = $("cardTitle");
+    const descEl = $("cardDesc");
+    const badgeEl = $("poseBadge");
+    const idxEl = $("index");
 
-    function seededRandom(seedStr){
-      const s = cyrb128(seedStr)[0];
-      return mulberry32(s);
-    }
+    function randomInt(max){ return Math.floor(Math.random()*max); }
 
-    function todayISO(){
-      const d = new Date();
-      const y = d.getUTCFullYear();
-      const m = String(d.getUTCMonth()+1).padStart(2,'0');
-      const day = String(d.getUTCDate()).padStart(2,'0');
-      return `${y}-${m}-${day}`;
-    }
+    function drawCard(){
+      const card = DECK[randomInt(DECK.length)];
+      const reversed = Math.random() < 0.5; // 50/50
 
-    // --- Core draw ---
-    function draw({daily, name, uprightOnly, explicitSeed}) {
-      const base = daily ? todayISO() : (Math.random()*1e9).toFixed(0);
-      const seed = explicitSeed || `${base}:${name||""}:${DECK.length}`;
-      const rnd = seededRandom(seed);
-      const cardIndex = Math.floor(rnd()*DECK.length);
-      const reversedRoll = rnd() < 0.5; // fair 50/50
-      const reversed = !uprightOnly && reversedRoll;
-      const card = DECK[cardIndex];
+      // Title and pose
+      titleEl.textContent = card.name + (reversed ? " (Reversed)" : "");
+      badgeEl.textContent = reversed ? "Reversed" : "Upright";
 
-      return {
-        seed, idx: cardIndex, reversed,
-        name: card.name,
-        meaning: reversed ? (card.reversed || "A reversed mirror: internalized, delayed, or asking for quiet integration.")
-                          : (card.upright  || "Upright energy: externalized, active, expressed."),
-        key: card.key,
-        pose: reversed ? "Reversed" : "Upright",
-      };
+      // Description (3 sentences written by you in the DECK above)
+      descEl.textContent = reversed ? card.reversed : card.upright;
+
+      // Image handling — add your image URL per card in DECK.img
+      imgEl.src = card.img || ""; // if empty, will show blank box
+      imgEl.alt = card.name;
+      imgEl.classList.toggle("reversed", reversed); // flips image 180° for reversed
+
+      // Meta/index (optional)
+      idxEl.textContent = `#${DECK.indexOf(card)+1} of ${DECK.length}`;
+
+      // Show panel and toggle buttons
+      panel.style.display = "block";
+      drawBtn.disabled = true;
+      resetBtn.disabled = false;
     }
 
-    // --- UI wiring ---
-    const els = {
-      drawBtn: document.getElementById('drawBtn'),
-      shareBtn: document.getElementById('shareBtn'),
-      dailyToggle: document.getElementById('dailyToggle'),
-      seedBadge: document.getElementById('seedBadge'),
-      nameInput: document.getElementById('nameInput'),
-      includeReversals: document.getElementById('includeReversals'),
-      panel: document.getElementById('cardPanel'),
-      cardName: document.getElementById('cardName'),
-      cardMeaning: document.getElementById('cardMeaning'),
-      cardPose: document.getElementById('cardPose'),
-      cardIndex: document.getElementById('cardIndex'),
-      cardKey: document.getElementById('cardKey'),
-      resetLink: document.getElementById('resetLink'),
-      status: document.getElementById('status'),
-      notes: document.getElementById('notes'),
-    };
-
-    function setStatus(msg){ els.status.textContent = msg || ""; }
-
-    function render(result){
-      els.panel.classList.remove('hidden');
-      els.cardName.textContent = result.name;
-      els.cardMeaning.textContent = result.meaning;
-      els.cardPose.textContent = result.pose;
-      els.cardIndex.textContent = `#${result.idx+1} of ${DECK.length}`;
-      els.cardKey.textContent = result.key;
-      els.seedBadge.textContent = result.seed.slice(0,16)+'…';
-      // Save to URL so it can be shared
-      const params = new URLSearchParams({
-        seed: result.seed, idx: result.idx, r: result.reversed?1:0
-      });
-      history.replaceState(null, "", location.pathname + "?" + params.toString());
+    function reset(){
+      panel.style.display = "none";
+      imgEl.src = "";
+      titleEl.textContent = "—";
+      descEl.textContent = "—";
+      badgeEl.textContent = "Upright";
+      idxEl.textContent = "";
+      drawBtn.disabled = false;
+      resetBtn.disabled = true;
     }
 
-    function drawNow(explicitSeed){
-      const daily = els.dailyToggle.checked;
-      const name = els.nameInput.value.trim();
-      const uprightOnly = els.includeReversals.value === 'upright';
-      const res = draw({daily, name, uprightOnly, explicitSeed});
-      render(res);
-      setStatus(daily ? "Daily mode: same seed for today (UTC). Add your name to personalize."
-                      : "Random mode: new seed each draw.");
-      return res;
-    }
-
-    els.drawBtn.addEventListener('click', ()=> drawNow());
-
-    els.shareBtn.addEventListener('click', async ()=>{
-      try{
-        await navigator.clipboard.writeText(window.location.href);
-        setStatus("Link copied. Anyone opening it will see this exact draw.");
-      }catch(e){
-        setStatus("Copy failed—select and copy the URL manually.");
-      }
-    });
-
-    els.resetLink.addEventListener('click', (e)=>{
-      e.preventDefault();
-      history.replaceState(null, "", location.pathname);
-      els.notes.value = "";
-      els.panel.classList.add('hidden');
-      setStatus("Cleared.");
-    });
-
-    // --- If URL contains a saved draw, reproduce it (permalink feature) ---
-    (function bootFromURL(){
-      const q = new URLSearchParams(location.search);
-      const seed = q.get('seed');
-      const idx = q.get('idx');
-      const r = q.get('r');
-      if(seed && idx){
-        // Rebuild view directly from URL for perfect reproduction
-        const card = DECK[Number(idx)] || DECK[0];
-        const reversed = r === '1';
-        render({
-          seed, idx:Number(idx), reversed,
-          name: card.name, key: card.key,
-          pose: reversed ? "Reversed" : "Upright",
-          meaning: reversed ? (card.reversed || "") : (card.upright || "")
-        });
-        setStatus("Loaded from shared link.");
-      } else {
-        // Show a polite first draw in Daily mode
-        els.dailyToggle.checked = true;
-        render(drawNow());
-      }
-    })();
+    drawBtn.addEventListener("click", drawCard);
+    resetBtn.addEventListener("click", reset);
   </script>
 </body>
 </html>
-
