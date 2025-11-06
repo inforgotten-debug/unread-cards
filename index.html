@@ -30,10 +30,17 @@
 
     #deckWarning{ margin-top:10px; color:#ffb3b3; font-size:13px }
 
-    @media (max-width:600px){
-      .card-top{ flex-direction:column }
-      .thumb{ width:100%; max-width:none }
-      .title{ font-size:18px }
+@media (max-width:600px){
+  .card-top{ flex-direction:column }
+  .thumb{ width:100%; max-width:none }
+  .title{ font-size:18px }
+
+  /* Fix mobile scroll issue */
+  .desc{
+    max-height:none !important;
+    overflow:visible !important;
+    -webkit-overflow-scrolling:auto !important;
+  }
     }
   </style>
 </head>
