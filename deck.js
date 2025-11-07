@@ -271,8 +271,10 @@ window.DECK =
     "imgReversed": "images/wands_ace_r.jpg",
     "upright": "",
     "reversed": "",
-    "uprightLong": "",
-    "reversedLong": ""
+    "uprightLong": "The Ace of Wands ignites your creative spark — the first pulse of motivation before planning kicks in. You might feel a surge of inspiration or an urge to begin something you can’t fully define yet. Don’t overthink the “how”; honor the “why.” Action, not clarity, will reveal form. Start a draft, a sketch, a message, anything that channels the spark before it fades. Passion is a renewable resource only when used.",
+    "reversedLong": "Reversed, this card signals blocked enthusiasm or burnout. You might be waiting to *feel ready* again — but energy returns through movement, not rest alone. Revisit old interests; re-spark curiosity in small, non-pressured ways. Sometimes “stuck” just means overexerted.",
+    "promptUpright": "What’s one idea you could act on before the excitement cools?",
+    "promptReversed": "What small joy could rekindle your motivation today?"
   },
   {
     "key": "wands_02",
@@ -281,8 +283,10 @@ window.DECK =
     "imgReversed": "images/wands_02_r.jpg",
     "upright": "",
     "reversed": "",
-    "uprightLong": "",
-    "reversedLong": ""
+    "uprightLong": "This card marks planning and expanding perspective. You’ve moved beyond impulse — now it’s about structuring potential. Map your options, research next steps, but stay flexible. Vision becomes reality through grounded logistics, not fantasy. The key is balancing foresight with courage: make a decision, even if imperfect.",
+    "reversedLong": "Reversed, the Two of Wands shows analysis paralysis or fear of leaving the comfort zone. You may over-plan to delay commitment. Accept that uncertainty is built into growth. You’ll learn more from iteration than hesitation.",
+    "promptUpright": "What next step would turn your current idea into progress, not just possibility?",
+    "promptReversed": "What would you risk missing by staying in place too long?"
   },
   {
     "key": "wands_03",
@@ -291,8 +295,10 @@ window.DECK =
     "imgReversed": "images/wands_03_r.jpg",
     "upright": "",
     "reversed": "",
-    "uprightLong": "",
-    "reversedLong": ""
+    "uprightLong": "The Three of Wands is expansion in motion — the moment when effort starts showing results. It encourages patience, delegation, and trust in timing. You’ve done your part; now let momentum carry you forward. Keep your vision alive but stop micromanaging outcomes.",
+    "reversedLong": "Reversed, the card hints at frustration over delays or miscommunication. Progress may feel invisible, but foundations are still forming. Reconnect to your original motivation; persistence will outlast impatience.",
+    "promptUpright": "Where could you replace control with confidence?",
+    "promptReversed": "How can you support patience instead of fighting it?"
   },
   {
     "key": "wands_04",
@@ -301,8 +307,10 @@ window.DECK =
     "imgReversed": "images/wands_04_r.jpg",
     "upright": "",
     "reversed": "",
-    "uprightLong": "",
-    "reversedLong": ""
+    "uprightLong": "This card celebrates milestones and shared joy. Pause to acknowledge stability — your efforts created something solid. Gratitude fuels long-term growth. Celebration is not distraction; it’s reinforcement. Bring community into your success; belonging amplifies achievement.",
+    "reversedLong": "Reversed, the Four of Wands shows tension within collaboration or difficulty accepting joy. Maybe you’re downplaying your success or overextending to keep harmony. Step back, redefine what “home” or “team” means now.",
+    "promptUpright": "Who could you celebrate with to honor this progress fully?",
+    "promptReversed": "What kind of environment truly lets you relax into yourself?"
   },
   {
     "key": "wands_05",
@@ -311,8 +319,10 @@ window.DECK =
     "imgReversed": "images/wands_05_r.jpg",
     "upright": "",
     "reversed": "",
-    "uprightLong": "",
-    "reversedLong": ""
+    "uprightLong": "Conflict sharpens awareness. The Five of Wands doesn’t mean chaos — it’s diversity of ideas demanding structure. Engage debate with curiosity instead of ego. Healthy friction can refine your goals if you listen actively.",
+    "reversedLong": "Reversed, this card suggests avoiding confrontation or internal conflict. Peacekeeping at the cost of truth breeds resentment. Speak clearly and calmly — harmony follows honesty.",
+    "promptUpright": "What disagreement could become productive if approached with openness?",
+    "promptReversed": "What truth are you avoiding to keep temporary peace?"
   },
   {
     "key": "wands_06",
@@ -321,8 +331,10 @@ window.DECK =
     "imgReversed": "images/wands_06_r.jpg",
     "upright": "",
     "reversed": "",
-    "uprightLong": "",
-    "reversedLong": ""
+    "uprightLong": "Victory, recognition, and self-trust define this card. You’ve earned a moment of validation — let it sink in. Acknowledge your capability and express gratitude to those who helped. Confidence sustains success better than comparison.",
+    "reversedLong": "Reversed, the Six of Wands warns of inflated ego or ignored achievements. Either you’re chasing validation or refusing it. Detach from approval; let internal pride replace external proof.",
+    "promptUpright": "How can you celebrate yourself without needing applause?",
+    "promptReversed": "What quiet win deserves your acknowledgment today?"
   },
   {
     "key": "wands_07",
@@ -331,8 +343,10 @@ window.DECK =
     "imgReversed": "images/wands_07_r.jpg",
     "upright": "",
     "reversed": "",
-    "uprightLong": "",
-    "reversedLong": ""
+    "uprightLong": "The Seven of Wands is about holding your ground — advocating for your ideas without hostility. Boundaries are acts of clarity, not aggression. Defend your progress with calm conviction, not fear.",
+    "reversedLong": "Reversed, this card suggests fatigue from constant guarding. Perhaps you’ve been in “fight mode” too long. It’s okay to rest; not every challenge requires battle. True strength includes surrender.",
+    "promptUpright": "Where can you protect your focus without going on the defensive?",
+    "promptReversed": "What can you stop defending that no longer threatens you?"
   },
   {
     "key": "wands_08",
@@ -341,8 +355,10 @@ window.DECK =
     "imgReversed": "images/wands_08_r.jpg",
     "upright": "",
     "reversed": "",
-    "uprightLong": "",
-    "reversedLong": ""
+    "uprightLong": "Momentum is here. The Eight of Wands signals acceleration — messages, travel, rapid developments. Trust timing and respond promptly but mindfully. Don’t add resistance by overanalyzing flow. Channel the pace into focus, not frenzy.",
+    "reversedLong": "Reversed, this card means delays or scattered attention. Slow progress doesn’t mean no progress. Use the pause to clarify priorities — you might be saved from rushing the wrong direction.",
+    "promptUpright": "What quick action could keep you aligned while momentum builds?",
+    "promptReversed": "What slowdown could actually serve your highest interest?"
   },
   {
     "key": "wands_09",
@@ -351,8 +367,10 @@ window.DECK =
     "imgReversed": "images/wands_09_r.jpg",
     "upright": "",
     "reversed": "",
-    "uprightLong": "",
-    "reversedLong": ""
+    "uprightLong": "Perseverance is the theme. You’ve endured setbacks but still stand capable. Strength now is strategic, not stubborn — protect your progress while pacing energy. Rest when needed; resilience is maintenance, not martyrdom.",
+    "reversedLong": "Reversed, the card signals burnout or paranoia. Fatigue may distort perception — not every challenge is a threat. Step back, rest, and reassess. Courage without recovery collapses.",
+    "promptUpright": "What support could turn endurance into ease?",
+    "promptReversed": "What boundary could prevent exhaustion from repeating?"
   },
   {
     "key": "wands_10",
@@ -361,8 +379,10 @@ window.DECK =
     "imgReversed": "images/wands_10_r.jpg",
     "upright": "",
     "reversed": "",
-    "uprightLong": "",
-    "reversedLong": ""
+    "uprightLong": "Responsibility and accomplishment coexist here. You’ve taken on much — perhaps too much — but this load has taught efficiency. Delegation isn’t weakness; it’s wisdom. Drop unnecessary burdens and keep only what serves purpose.",
+    "reversedLong": "Reversed, the card indicates overload or emotional fatigue. You might be defining worth by productivity. Simplify commitments before resentment replaces purpose.",
+    "promptUpright": "Which obligation could you release to move lighter?",
+    "promptReversed": "What task could you postpone or share to reclaim balance?"
   },
   {
     "key": "wands_page",
@@ -371,8 +391,10 @@ window.DECK =
     "imgReversed": "images/wands_page_r.jpg",
     "upright": "",
     "reversed": "",
-    "uprightLong": "",
-    "reversedLong": ""
+    "uprightLong": "The Page of Wands brings a rush of curiosity and possibility. You’re in beginner’s mind — the sweet spot between excitement and inexperience. This is your cue to explore, test, and make mistakes fast. Let discovery replace pressure; enthusiasm is the spark that sustains long projects. Be playful with creativity instead of chasing perfection. The key lesson: learning is momentum, not delay.",
+    "reversedLong": "Reversed, this Page warns of restlessness and scattered focus. You may chase stimulation over purpose or drop ideas at the first obstacle. Revisit your “why,” simplify inputs, and channel curiosity into a single direction. Inspiration multiplies when contained.",
+    "promptUpright": "What small experiment would feel fun even if it fails?",
+    "promptReversed": "What idea deserves completion instead of replacement?"
   },
   {
     "key": "wands_knight",
@@ -381,8 +403,10 @@ window.DECK =
     "imgReversed": "images/wands_knight_r.jpg",
     "upright": "",
     "reversed": "",
-    "uprightLong": "",
-    "reversedLong": ""
+    "uprightLong": "This Knight charges ahead with confidence and passion. It’s your call to act boldly and trust instinct. Progress now rewards courage, not caution. However, enthusiasm needs aim — excitement without purpose burns energy. Direct momentum with intention, and you’ll turn sparks into steady fire.",
+    "reversedLong": "Reversed, the Knight of Wands burns out chasing every spark. Impulse and boredom rotate like seasons. Slow down to reconnect action with purpose. Pause doesn’t mean failure — it’s recalibration.",
+    "promptUpright": "Where can you act decisively without waiting for certainty?",
+    "promptReversed": "What part of your routine could you steady to protect your passion?"
   },
   {
     "key": "wands_queen",
@@ -391,8 +415,10 @@ window.DECK =
     "imgReversed": "images/wands_queen_r.jpg",
     "upright": "",
     "reversed": "",
-    "uprightLong": "",
-    "reversedLong": ""
+    "uprightLong": "The Queen of Wands embodies radiant confidence. She creates through charisma, not force. You’re invited to express yourself authentically, lead through enthusiasm, and own your presence. Magnetism grows when you believe in your worth. Make visibility an act of service, not vanity — your light reminds others of theirs.",
+    "reversedLong": "Reversed, this Queen signals self-doubt or creative dimming. You may shrink to avoid judgment. Reconnect with what energizes you privately first; warmth returns before spotlight. Self-trust rekindles influence.",
+    "promptUpright": "Where can you take up space with ease instead of apology?",
+    "promptReversed": "What environment helps you remember your natural confidence?"
   },
   {
     "key": "wands_king",
@@ -401,8 +427,10 @@ window.DECK =
     "imgReversed": "images/wands_king_r.jpg",
     "upright": "",
     "reversed": "",
-    "uprightLong": "",
-    "reversedLong": ""
+    "uprightLong": "The King of Wands leads through vision. You’ve gained enough experience to guide others by example, not command. Empower, delegate, and inspire — your fire multiplies when shared. Visionary leadership isn’t about control but coherence: aligning purpose with action.",
+    "reversedLong": "Reversed, the King warns against ego-driven direction. Pride, impatience, or micromanagement can extinguish teamwork. Reconnect with purpose and humility; your power is influence, not dominance.",
+    "promptUpright": "Whose spark could you ignite through your guidance today?",
+    "promptReversed": "What would trusting others to rise beside you make possible?"
   },
   {
     "key": "cups_ace",
@@ -411,8 +439,10 @@ window.DECK =
     "imgReversed": "images/cups_ace_r.jpg",
     "upright": "",
     "reversed": "",
-    "uprightLong": "",
-    "reversedLong": ""
+    "uprightLong": "The Ace of Cups overflows with emotional renewal and openness. Love, forgiveness, and creativity stem from vulnerability. This is the heart’s reset button. Express affection freely, journal your gratitude, or allow tears that cleanse. Let empathy refill your emotional reserves.",
+    "reversedLong": "Reversed, the Ace points to emotional blockage or suppression. Perhaps self-protection has turned into isolation. Reconnection begins with self-kindness — acknowledge the feeling without fixing it. Healing follows honesty.",
+    "promptUpright": "What emotion deserves honest expression today?",
+    "promptReversed": "What would happen if you allowed yourself to feel without labeling it wrong?"
   },
   {
     "key": "cups_02",
@@ -421,8 +451,10 @@ window.DECK =
     "imgReversed": "images/cups_02_r.jpg",
     "upright": "",
     "reversed": "",
-    "uprightLong": "",
-    "reversedLong": ""
+    "uprightLong": "This card celebrates mutual respect and partnership. Collaboration thrives when communication stays clear and generous. Whether romantic, platonic, or professional, shared growth requires reciprocity. Honor equality by listening as much as you speak.",
+    "reversedLong": "Reversed, imbalance or miscommunication disturbs harmony. You might be giving more than you receive or avoiding honesty to preserve peace. Healthy connection can handle truth — real unity needs transparency.",
+    "promptUpright": "What relationship could deepen through one sincere act of appreciation?",
+    "promptReversed": "What boundary could restore balance in connection?"
   },
   {
     "key": "cups_03",
@@ -431,8 +463,10 @@ window.DECK =
     "imgReversed": "images/cups_03_r.jpg",
     "upright": "",
     "reversed": "",
-    "uprightLong": "",
-    "reversedLong": ""
+    "uprightLong": "The Three of Cups symbolizes community and joy. Connection is medicine; celebrate life with people who replenish you. Share achievements, laughter, or gratitude. Emotional resilience strengthens through togetherness.",
+    "reversedLong": "Reversed, it may suggest social fatigue or performing belonging. Step back from shallow circles and nurture depth instead. Joy returns when authenticity replaces obligation.",
+    "promptUpright": "Who could you thank or celebrate with this week?",
+    "promptReversed": "Who truly makes you feel at home in yourself?"
   },
   {
     "key": "cups_04",
@@ -441,8 +475,10 @@ window.DECK =
     "imgReversed": "images/cups_04_r.jpg",
     "upright": "",
     "reversed": "",
-    "uprightLong": "",
-    "reversedLong": ""
+    "uprightLong": "This card appears when apathy clouds awareness. You may feel detached from daily joy. Instead of chasing excitement, look for gratitude in the ordinary. Contentment grows from noticing, not acquiring.",
+    "reversedLong": "Reversed, the heart stirs again — curiosity and openness begin returning. Follow mild interest before passion fully awakens. Growth doesn’t need drama; it needs permission.",
+    "promptUpright": "What small detail could you appreciate right now?",
+    "promptReversed": "What simple curiosity feels like a quiet yes?"
   },
   {
     "key": "cups_05",
@@ -451,8 +487,10 @@ window.DECK =
     "imgReversed": "images/cups_05_r.jpg",
     "upright": "",
     "reversed": "",
-    "uprightLong": "",
-    "reversedLong": ""
+    "uprightLong": "Grief and disappointment are natural; the Five of Cups teaches acceptance without collapse. Focus gently on what remains rather than what’s gone. Loss, when processed, clarifies value. Let yourself feel, but don’t mistake sadness for the whole story.",
+    "reversedLong": "Reversed, this card signals emotional recovery. Perspective widens; you see lessons where only pain existed. Healing becomes a choice. Turn attention toward gratitude and growth — they’re ready.",
+    "promptUpright": "What remains standing that still supports you?",
+    "promptReversed": "What insight did loss gift you?"
   },
   {
     "key": "cups_06",
@@ -461,8 +499,10 @@ window.DECK =
     "imgReversed": "images/cups_06_r.jpg",
     "upright": "",
     "reversed": "",
-    "uprightLong": "",
-    "reversedLong": ""
+    "uprightLong": "Nostalgia softens the present. Reconnecting with your inner child or past kindness can restore joy and innocence. Use memory as medicine, not escape — let good moments remind you what’s worth protecting.",
+    "reversedLong": "Reversed, the Six warns against living through memory. Over-idealizing the past can block the present. Integrate lessons without regression. Gratitude belongs to yesterday; purpose lives today.",
+    "promptUpright": "What old joy could you revive in a new way?",
+    "promptReversed": "What comfort from the past can inspire, not imprison, you now?"
   },
   {
     "key": "cups_07",
@@ -471,8 +511,10 @@ window.DECK =
     "imgReversed": "images/cups_07_r.jpg",
     "upright": "",
     "reversed": "",
-    "uprightLong": "",
-    "reversedLong": ""
+    "uprightLong": "The Seven of Cups reflects imagination and choice — a landscape of possibilities, some inspiring, others distracting. When everything looks appealing, clarity hides behind emotion. Take inventory: which option energizes, which drains? Not every opportunity is yours to pursue. Daydreams become direction when filtered through values.",
+    "reversedLong": "Reversed, confusion clears. You’re seeing through illusion, distinguishing fantasy from feasible vision. Now is the time to commit — choosing doesn’t limit freedom, it focuses it. Simplify your choices into one aligned action.",
+    "promptUpright": "Which idea feels exciting *and* sustainable?",
+    "promptReversed": "What decision would release mental clutter?"
   },
   {
     "key": "cups_08",
@@ -481,8 +523,10 @@ window.DECK =
     "imgReversed": "images/cups_08_r.jpg",
     "upright": "",
     "reversed": "",
-    "uprightLong": "",
-    "reversedLong": ""
+    "uprightLong": "The Eight of Cups honors the courage to walk away from what no longer fulfills. Leaving isn’t failure; it’s evolution. You’ve outgrown an emotional environment or pursuit — acknowledge gratitude, then move on. Growth requires releasing the known to find meaning anew.",
+    "reversedLong": "Reversed, this card shows hesitation — knowing it’s time to move, yet lingering. Fear of regret can freeze progress. Trust that intuition’s whisper is enough reason. Departure may ache, but stagnation aches longer.",
+    "promptUpright": "What part of your life feels complete enough to release with love?",
+    "promptReversed": "What reassurance could you offer yourself to take that first step?"
   },
   {
     "key": "cups_09",
@@ -491,8 +535,10 @@ window.DECK =
     "imgReversed": "images/cups_09_r.jpg",
     "upright": "",
     "reversed": "",
-    "uprightLong": "",
-    "reversedLong": ""
+    "uprightLong": "The Nine of Cups embodies contentment and personal fulfillment. It’s a reminder to appreciate success before chasing the next goal. You’ve created satisfaction; let it sink in. Gratitude turns accomplishment into emotional wealth. Celebrate quietly, without conditions.",
+    "reversedLong": "Reversed, the card suggests overindulgence or hollow achievement. You might be using pleasure to avoid emptiness. Refocus on meaning, not image — fulfillment is sustainable when aligned with purpose.",
+    "promptUpright": "How can you enjoy what you already have, without adding anything?",
+    "promptReversed": "What’s missing beneath the surface of comfort?"
   },
   {
     "key": "cups_10",
@@ -501,8 +547,10 @@ window.DECK =
     "imgReversed": "images/cups_10_r.jpg",
     "upright": "",
     "reversed": "",
-    "uprightLong": "",
-    "reversedLong": ""
+    "uprightLong": "Harmony and belonging define this card. The Ten of Cups shows emotional maturity — relationships or communities built on respect. You’re aligned with your values, and peace follows. Enjoy stability without fearing its end.",
+    "reversedLong": "Reversed, unrealistic ideals or unspoken expectations disturb happiness. Joy becomes fragile when compared to perfection. Focus on presence rather than performance; wholeness is imperfect but real.",
+    "promptUpright": "What daily action nurtures long-term harmony in your circle?",
+    "promptReversed": "What standard of “happiness” can you release to feel content again?"
   },
   {
     "key": "cups_page",
@@ -511,8 +559,10 @@ window.DECK =
     "imgReversed": "images/cups_page_r.jpg",
     "upright": "",
     "reversed": "",
-    "uprightLong": "",
-    "reversedLong": ""
+    "uprightLong": "Curiosity, intuition, and play lead the Page of Cups. You’re learning emotional fluency — understanding feelings before acting on them. Let imagination guide problem-solving and connection. Sensitivity here is intelligence, not weakness.",
+    "reversedLong": "Reversed, sensitivity tilts into escapism. Fantasy or self-pity blocks growth. Re-anchor through small, tangible acts of self-care — a walk, music, writing. Emotional maturity develops through presence, not retreat.",
+    "promptUpright": "How could creativity express what words can’t today?",
+    "promptReversed": "What soothing ritual grounds you back in reality gently?"
   },
   {
     "key": "cups_knight",
@@ -521,8 +571,10 @@ window.DECK =
     "imgReversed": "images/cups_knight_r.jpg",
     "upright": "",
     "reversed": "",
-    "uprightLong": "",
-    "reversedLong": ""
+    "uprightLong": "The Knight of Cups acts on beauty and empathy. You’re invited to pursue what inspires — a cause, connection, or creative goal. Lead through emotional intelligence; sincerity attracts allies. Keep ideals high, but balance with follow-through.",
+    "reversedLong": "Reversed, moodiness or avoidance may replace genuine inspiration. You might be chasing validation instead of authentic feeling. Recenter through consistent effort; discipline protects dreams.",
+    "promptUpright": "What heartfelt pursuit deserves your focus this month?",
+    "promptReversed": "What habit could turn inspiration into tangible progress?"
   },
   {
     "key": "cups_queen",
@@ -531,8 +583,10 @@ window.DECK =
     "imgReversed": "images/cups_queen_r.jpg",
     "upright": "",
     "reversed": "",
-    "uprightLong": "",
-    "reversedLong": ""
+    "uprightLong": "The Queen embodies empathy and emotional maturity. She listens without absorbing others’ pain. This is your reminder that compassion thrives alongside boundaries. Nurture yourself so you can nurture others sustainably.",
+    "reversedLong": "Reversed, emotional overwhelm or codependency clouds judgment. Detach kindly; your worth isn’t measured by caretaking. Refill before offering.",
+    "promptUpright": "What self-care practice replenishes your ability to care?",
+    "promptReversed": "How can you protect your peace without guilt?"
   },
   {
     "key": "cups_king",
@@ -541,8 +595,10 @@ window.DECK =
     "imgReversed": "images/cups_king_r.jpg",
     "upright": "",
     "reversed": "",
-    "uprightLong": "",
-    "reversedLong": ""
+    "uprightLong": "Emotional steadiness defines this King. He leads calmly, mediating with empathy and clarity. You’re encouraged to hold authority without losing kindness — be the calm in others’ storms.",
+    "reversedLong": "Reversed, this King suppresses emotions or manipulates subtly. Control can’t replace connection. Honest expression rebuilds trust inward and outward.",
+    "promptUpright": "Where could your composure inspire stability in others?",
+    "promptReversed": "What truth could you share to clear unspoken tension?"
   },
   {
     "key": "swords_ace",
@@ -551,8 +607,10 @@ window.DECK =
     "imgReversed": "images/swords_ace_r.jpg",
     "upright": "",
     "reversed": "",
-    "uprightLong": "",
-    "reversedLong": ""
+    "uprightLong": "Breakthrough and mental clarity. The Ace of Swords cuts through confusion — say what’s true, even if messy. Clear language frees energy stuck in rumination. Insight matters only when expressed.",
+    "reversedLong": "Reversed, fog, indecision, or misinformation cloud your vision. Pause communication until clarity returns. Seek facts, not reassurance. Silence can sharpen thought.",
+    "promptUpright": "What truth needs words instead of worry?",
+    "promptReversed": "What assumption could you recheck before deciding?"
   },
   {
     "key": "swords_02",
@@ -561,8 +619,10 @@ window.DECK =
     "imgReversed": "images/swords_02_r.jpg",
     "upright": "",
     "reversed": "",
-    "uprightLong": "",
-    "reversedLong": ""
+    "uprightLong": "You’re at a crossroads. Avoiding a decision keeps anxiety alive. Choose awareness over avoidance: gather data, trust intuition, and commit. Peace comes after choice, not before.",
+    "reversedLong": "Reversed, overwhelm or denial deepens the stalemate. You’re thinking in circles — pause the loop. Even a temporary choice builds momentum.",
+    "promptUpright": "What information or feeling would make this decision easier?",
+    "promptReversed": "What’s one small move that breaks indecision’s hold?"
   },
   {
     "key": "swords_03",
@@ -571,8 +631,10 @@ window.DECK =
     "imgReversed": "images/swords_03_r.jpg",
     "upright": "",
     "reversed": "",
-    "uprightLong": "",
-    "reversedLong": ""
+    "uprightLong": "Pain acknowledged is pain released. This card shows heartbreak, disappointment, or betrayal asking to be witnessed. Expression — writing, talking, crying — transforms suffering into clarity. Healing begins when you stop minimizing your hurt.",
+    "reversedLong": "Reversed, healing has begun. Forgiveness — especially toward yourself — completes closure. Don’t rush; gentleness keeps scars flexible. You’re stronger for having felt deeply.",
+    "promptUpright": "What emotion are you ready to name out loud?",
+    "promptReversed": "What act of grace could honor how far you’ve healed?"
   },
   {
     "key": "swords_04",
@@ -581,8 +643,10 @@ window.DECK =
     "imgReversed": "images/swords_04_r.jpg",
     "upright": "",
     "reversed": "",
-    "uprightLong": "",
-    "reversedLong": ""
+    "uprightLong": "Rest and recalibration define this card. Mental fatigue means you’ve processed enough — now the mind needs silence. Prioritize recovery without guilt. Stillness prepares clarity’s return.",
+    "reversedLong": "Reversed, exhaustion turns chronic. If you’re restless but drained, slow down strategically. Real productivity begins after repair. Rest isn’t earned — it’s required.",
+    "promptUpright": "What rest would make your next effort more effective?",
+    "promptReversed": "What signal has your body given that you’ve ignored?"
   },
   {
     "key": "swords_05",
@@ -591,8 +655,10 @@ window.DECK =
     "imgReversed": "images/swords_05_r.jpg",
     "upright": "",
     "reversed": "",
-    "uprightLong": "",
-    "reversedLong": ""
+    "uprightLong": "The Five of Swords signals the aftermath of conflict — the quiet after words cut too sharply. You may have won an argument but lost connection. This card reminds you that being “right” can sometimes mean being lonely. Pause and examine whether victory served truth or ego. In professional or personal life, progress now lies in reconciliation, not retaliation. Practically, that may mean offering an apology, clarifying intent, or simply dropping the need for the last word. The energy asks for maturity: trade pride for peace and you’ll feel the release immediately.",
+    "reversedLong": "Reversed, the conflict is dissolving — forgiveness and understanding become possible. You’ve learned that communication without compassion breeds tension. This is your cue to rebuild trust through transparency and empathy. Don’t fix everything; repair what matters most. When you release resentment, energy returns to creation.",
+    "promptUpright": "What outcome would feel better than being right?",
+    "promptReversed": "What bridge could you quietly start rebuilding today?"
   },
   {
     "key": "swords_06",
@@ -601,8 +667,10 @@ window.DECK =
     "imgReversed": "images/swords_06_r.jpg",
     "upright": "",
     "reversed": "",
-    "uprightLong": "",
-    "reversedLong": ""
+    "uprightLong": "The Six of Swords represents transition and healing through movement. You’re leaving turbulence behind — maybe mentally, emotionally, or geographically. It’s not escape; it’s progression. Allow yourself distance from what drains clarity. The journey might feel uncertain, but peace accumulates with each mile of perspective. Detach gently from the past while carrying only its wisdom. In practical terms, this might mean changing environments, adjusting routines, or limiting contact with chaos. Every act that moves you toward calm counts.",
+    "reversedLong": "Reversed, you may be resisting closure, replaying old narratives that keep pain current. The ferry waits, but hesitation delays relief. Accept that you can’t rewrite the past — you can only choose not to relive it. Gather your courage and row toward healing, even slowly. Progress is measured by honesty, not speed.",
+    "promptUpright": "What change of scenery — literal or mental — would lighten your mind?",
+    "promptReversed": "What story are you ready to stop retelling to find peace?"
   },
   {
     "key": "swords_07",
@@ -611,8 +679,10 @@ window.DECK =
     "imgReversed": "images/swords_07_r.jpg",
     "upright": "",
     "reversed": "",
-    "uprightLong": "",
-    "reversedLong": ""
+    "uprightLong": "The Seven of Swords deals with strategy, discretion, and sometimes avoidance. It asks you to examine motives — yours and others’. Are you being resourceful or evasive? Smart planning protects energy, but secrecy breeds distance. Integrity is efficiency; deception is a leak. In work, choose quiet preparation over shortcuts. In relationships, clarity prevents confusion. The mature use of this energy is thoughtful communication paired with self-protection.",
+    "reversedLong": "Reversed, truth surfaces. What was hidden seeks resolution. You may feel relief or vulnerability — both cleanse the air. Admission, even silent acknowledgment, ends the mental spin. This is accountability as freedom: releasing the weight of pretending. After confession, trust rebuilds naturally.",
+    "promptUpright": "How can you stay strategic without sacrificing honesty?",
+    "promptReversed": "What truth could free your energy if said aloud?"
   },
   {
     "key": "swords_08",
@@ -621,8 +691,10 @@ window.DECK =
     "imgReversed": "images/swords_08_r.jpg",
     "upright": "",
     "reversed": "",
-    "uprightLong": "",
-    "reversedLong": ""
+    "uprightLong": "The Eight of Swords mirrors self-imposed limitation. You feel trapped, but the exit exists — obscured by fear and habit. The ropes are thoughts, not walls. Start by challenging one assumption: “I can’t because…” Replace it with curiosity: “What if I could in one small way?” Freedom begins in mental rehearsal, then physical motion. Observe the inner critic with distance; it guards outdated safety rules. Each brave thought loosens a knot.",
+    "reversedLong": "Reversed, clarity dawns — you’re recognizing self-created barriers and dismantling them. It’s liberation through awareness. Continue small, consistent actions that prove capability to yourself. Independence is built moment by moment; confidence follows evidence. Celebrate every escape from doubt.",
+    "promptUpright": "What belief keeps you still, and how could you gently test its truth?",
+    "promptReversed": "What tiny action today would confirm your freedom is real?"
   },
   {
     "key": "swords_09",
@@ -631,8 +703,10 @@ window.DECK =
     "imgReversed": "images/swords_09_r.jpg",
     "upright": "",
     "reversed": "",
-    "uprightLong": "",
-    "reversedLong": ""
+    "uprightLong": "This card embodies anxiety’s night hours — rumination, what-ifs, imagined catastrophes. The mind overprotects by rehearsing pain. The cure isn’t suppression but compassion: breathe, write worries down, externalize them so they shrink to scale. Anxiety loses grip when observed kindly. Practical care — hydration, daylight, conversation — grounds the nervous system back in present safety. Your fears want reassurance, not logic.",
+    "reversedLong": "Reversed, dawn breaks. Perspective returns after sleepless worry. You’re starting to differentiate concern from reality. Maintain the practices that soothe — consistent rest, boundaries with news or screens, honest talk. Healing from fear is repetition of calm.",
+    "promptUpright": "What evidence of safety can you remind yourself of right now?",
+    "promptReversed": "What evening ritual could teach your body that the day is over?"
   },
   {
     "key": "swords_10",
@@ -641,8 +715,10 @@ window.DECK =
     "imgReversed": "images/swords_10_r.jpg",
     "upright": "",
     "reversed": "",
-    "uprightLong": "",
-    "reversedLong": ""
+    "uprightLong": "Rock bottom becomes solid ground here. The Ten of Swords marks the end of an exhausting cycle — betrayal, burnout, or harsh truth. The mind has exhausted its defenses, leaving space for renewal. Allow closure instead of seeking more evidence. Acceptance is resurrection’s prelude. Practically, this means stepping back, redefining roles, or releasing perfectionism. The worst has already peaked; now healing begins quietly.",
+    "reversedLong": "Reversed, recovery accelerates. You’re standing again, humbled but wiser. Integrate the lesson, not the pain. Don’t fear vulnerability; it proves you’re still open to life. Each sunrise after collapse rebuilds strength with more compassion.",
+    "promptUpright": "What situation can you finally stop analyzing and simply let end?",
+    "promptReversed": "What new boundary will protect the peace you’ve reclaimed?"
   },
   {
     "key": "swords_page",
@@ -651,8 +727,10 @@ window.DECK =
     "imgReversed": "images/swords_page_r.jpg",
     "upright": "",
     "reversed": "",
-    "uprightLong": "",
-    "reversedLong": ""
+    "uprightLong": "Curiosity fuels mental growth. The Page of Swords encourages study, dialogue, and asking better questions. You’re absorbing information fast — verify before sharing. Use your intellect to clarify, not impress. Observe communication patterns; listening sharpens thinking.",
+    "reversedLong": "Reversed, scattered thoughts or defensiveness interrupt learning. You may be reacting rather than reasoning. Slow the tempo; reflect before responding. Intellectual humility creates connection where argument builds walls.",
+    "promptUpright": "What topic genuinely excites your learning mind today?",
+    "promptReversed": "What question could replace your next assumption?"
   },
   {
     "key": "swords_knight",
@@ -661,8 +739,10 @@ window.DECK =
     "imgReversed": "images/swords_knight_r.jpg",
     "upright": "",
     "reversed": "",
-    "uprightLong": "",
-    "reversedLong": ""
+    "uprightLong": "Focused ambition propels you. The Knight of Swords acts quickly on conviction. Channel this surge into a mission worth effort, but temper speed with awareness — urgency without empathy bruises progress. Aim your drive through a clear ethical filter.",
+    "reversedLong": "Reversed, impatience or tunnel vision causes friction. Pause before reacting. Rushing drains credibility and results. Strategy beats force every time. Breathe, then proceed with clarity.",
+    "promptUpright": "Where can swift action serve truth, not ego?",
+    "promptReversed": "What would slowing down reveal that speed hides?"
   },
   {
     "key": "swords_queen",
@@ -671,8 +751,10 @@ window.DECK =
     "imgReversed": "images/swords_queen_r.jpg",
     "upright": "",
     "reversed": "",
-    "uprightLong": "",
-    "reversedLong": ""
+    "uprightLong": "The Queen embodies perceptive clarity. She separates emotion from evidence without dismissing either. Practice discernment: hear facts fully before concluding. Communicate honestly yet kindly — sharp words heal when delivered with grace. Objectivity is compassion wearing boundaries.",
+    "reversedLong": "Reversed, intellect defends against vulnerability. Sarcasm, cynicism, or withdrawal may mask hurt. Allow warmth back into logic. Softening doesn’t weaken intelligence; it humanizes it.",
+    "promptUpright": "What truth could you phrase more gently but still firmly?",
+    "promptReversed": "Where could empathy make your reasoning stronger?"
   },
   {
     "key": "swords_king",
@@ -681,8 +763,10 @@ window.DECK =
     "imgReversed": "images/swords_king_r.jpg",
     "upright": "",
     "reversed": "",
-    "uprightLong": "",
-    "reversedLong": ""
+    "uprightLong": "The King of Swords channels wisdom through structure. You’re called to make a decision using reason balanced with integrity. Define principles clearly and stand by them. Leadership now means fairness, not favoritism. Detachment clarifies, but compassion must remain at the helm.",
+    "reversedLong": "Reversed, logic becomes manipulation or rigidity. You might use intellect to dominate rather than guide. Reconnect with purpose: truth serves, it doesn’t control. Apologize quickly if you’ve cut instead of clarified.",
+    "promptUpright": "What principle will guide your next decision when emotions blur?",
+    "promptReversed": "How could humility return balance to your authority?"
   },
   {
     "key": "pentacles_ace",
@@ -691,8 +775,10 @@ window.DECK =
     "imgReversed": "images/pentacles_ace_r.jpg",
     "upright": "",
     "reversed": "",
-    "uprightLong": "",
-    "reversedLong": ""
+    "uprightLong": "Opportunity is materializing. The Ace of Pentacles marks tangible beginnings — a job, project, or lifestyle upgrade. Ground ideas into routine: budgets, schedules, habits. Prosperity starts with consistent care of small details. Gratitude and stewardship attract expansion.",
+    "reversedLong": "Reversed, missed chances or fear of scarcity may dominate. Redirect focus from outcome to preparation. Create the stability you crave through daily reliability. Wealth follows trust in process.",
+    "promptUpright": "What practical step could anchor your new opportunity today?",
+    "promptReversed": "How can you treat consistency itself as abundance?"
   },
   {
     "key": "pentacles_02",
@@ -701,8 +787,10 @@ window.DECK =
     "imgReversed": "images/pentacles_02_r.jpg",
     "upright": "",
     "reversed": "",
-    "uprightLong": "",
-    "reversedLong": ""
+    "uprightLong": "Balance and adaptability define this card. You’re managing multiple demands — progress depends on rhythm, not rigidity. Use planning tools, but stay playful. Flexibility prevents fatigue. Think dance, not juggle.",
+    "reversedLong": "Reversed, imbalance leads to chaos or overwhelm. You may be saying yes too often. Prioritize essentials, drop guilt, and automate where possible. Stability grows when you stop rescuing every task.",
+    "promptUpright": "What system could simplify your week without killing spontaneity?",
+    "promptReversed": "What could you kindly postpone to breathe easier?"
   },
   {
     "key": "pentacles_03",
@@ -711,8 +799,10 @@ window.DECK =
     "imgReversed": "images/pentacles_03_r.jpg",
     "upright": "",
     "reversed": "",
-    "uprightLong": "",
-    "reversedLong": ""
+    "uprightLong": "Collaboration and skill-building shine. The Three of Pentacles rewards teamwork rooted in respect. Seek feedback; mastery matures in dialogue. Recognize your part in a larger structure — contribution is creation. Shared success multiplies motivation.",
+    "reversedLong": "Reversed, miscommunication or ego may undermine cooperation. If progress stalls, revisit shared goals and clarify roles. Listen before fixing. Harmony rebuilds through humility.",
+    "promptUpright": "Whose perspective could refine your current project?",
+    "promptReversed": "What expectation needs to be voiced clearly to restore flow?"
   },
   {
     "key": "pentacles_04",
@@ -721,8 +811,10 @@ window.DECK =
     "imgReversed": "images/pentacles_04_r.jpg",
     "upright": "",
     "reversed": "",
-    "uprightLong": "",
-    "reversedLong": ""
+    "uprightLong": "The Four of Pentacles represents stability — and the instinct to guard it. You’ve worked hard to create security, but control easily turns into constriction. This card invites you to review what you’re holding too tightly: time, money, love, or opinions. Saving energy is wise; hoarding it breeds fear. True stability breathes. Generosity and circulation keep abundance alive. Let resources, creativity, and affection move through you like air in a well-ventilated room. Security grows by trust, not tension.",
+    "reversedLong": "Reversed, the walls of protection have become isolation. Scarcity thinking drains more than it preserves. Re-enter exchange: donate, collaborate, or delegate. Every release teaches faith in replenishment. Hoarded energy stagnates; shared energy multiplies.",
+    "promptUpright": "What could you share today that would make you feel lighter, not poorer?",
+    "promptReversed": "Where could generosity reopen your sense of flow?"
   },
   {
     "key": "pentacles_05",
@@ -731,8 +823,10 @@ window.DECK =
     "imgReversed": "images/pentacles_05_r.jpg",
     "upright": "",
     "reversed": "",
-    "uprightLong": "",
-    "reversedLong": ""
+    "uprightLong": "This card portrays struggle, financial or emotional, but its message is belonging despite hardship. You may feel excluded or unsupported, yet help exists within reach if pride softens. Ask, communicate, let others in. Connection is part of survival strategy. On a practical level, review resources honestly and seek guidance; improvement begins with acknowledgment, not shame. Compassion for yourself keeps dignity intact through difficult seasons.",
+    "reversedLong": "Reversed, recovery begins. Support arrives when you accept it. Mindset shifts from “lack” to “learning.” Even small improvements—steady work, gratitude, self-care—compound into stability. You’re walking out of scarcity; keep noticing evidence of safety.",
+    "promptUpright": "Whose warmth or wisdom could you reach for instead of enduring alone?",
+    "promptReversed": "What sign already proves that circumstances are improving?"
   },
   {
     "key": "pentacles_06",
@@ -741,8 +835,10 @@ window.DECK =
     "imgReversed": "images/pentacles_06_r.jpg",
     "upright": "",
     "reversed": "",
-    "uprightLong": "",
-    "reversedLong": ""
+    "uprightLong": "Giving and receiving come into balance. This card reminds you that generosity and boundaries coexist. Offer what you can without debt to yourself, and receive aid without guilt. Exchange—money, time, feedback—thrives when transparent. Equality, not hierarchy, keeps relationships healthy. In leadership, practice fair distribution of credit and reward. In friendship, let help circulate both ways.",
+    "reversedLong": "Reversed, imbalance surfaces: over-giving, dependency, or transactional kindness. Reflect on motive—are you giving to connect or to control? Sustainable generosity requires reciprocity. Adjust flow, not feeling.",
+    "promptUpright": "Where could balanced generosity strengthen trust today?",
+    "promptReversed": "What boundary could protect the purity of your giving?"
   },
   {
     "key": "pentacles_07",
@@ -751,8 +847,10 @@ window.DECK =
     "imgReversed": "images/pentacles_07_r.jpg",
     "upright": "",
     "reversed": "",
-    "uprightLong": "",
-    "reversedLong": ""
+    "uprightLong": "Patience and evaluation define this stage. You’ve planted seeds; results take time. Resist uprooting progress to check its growth. Reflection replaces urgency—review methods, refine effort, trust the unseen stages. Progress is cumulative, not constant. Take satisfaction in consistency rather than outcome.",
+    "reversedLong": "Reversed, impatience tempts you to abandon worthwhile work. Boredom disguises discouragement. Instead of quitting, adjust the process: change pace, tools, or expectations. Sometimes rest revives motivation better than overhaul.",
+    "promptUpright": "What slow project deserves faith instead of interference?",
+    "promptReversed": "What could you tweak—not trash—to regain momentum?"
   },
   {
     "key": "pentacles_08",
@@ -761,8 +859,10 @@ window.DECK =
     "imgReversed": "images/pentacles_08_r.jpg",
     "upright": "",
     "reversed": "",
-    "uprightLong": "",
-    "reversedLong": ""
+    "uprightLong": "The craftsman’s card—mastery through repetition. Skill deepens when attention replaces hurry. Pour presence into your work: refine, study, improve. Pride in craftsmanship strengthens identity and income alike. Quality over speed builds legacy.",
+    "reversedLong": "Reversed, perfectionism or monotony dull enthusiasm. Overfocus on output steals artistry. Step back to see purpose beyond routine. Re-introduce curiosity—learn a variant, teach, or rest. Joy revives precision.",
+    "promptUpright": "Which daily habit quietly shapes your expertise?",
+    "promptReversed": "How can you rediscover play inside your practice?"
   },
   {
     "key": "pentacles_09",
@@ -771,8 +871,10 @@ window.DECK =
     "imgReversed": "images/pentacles_09_r.jpg",
     "upright": "",
     "reversed": "",
-    "uprightLong": "",
-    "reversedLong": ""
+    "uprightLong": "Independence and earned abundance bloom here. The Nine celebrates self-reliance grounded in gratitude. You’ve built comfort through diligence—pause and enjoy it. Luxury can be simple: unhurried breakfast, tidy workspace, quiet evening. True wealth is autonomy over your time. Appreciate it before chasing more.",
+    "reversedLong": "Reversed, accomplishment feels empty or fragile. Maybe you’re hustling past satisfaction. Detach identity from productivity; measure worth by presence. Abundance expands when appreciated, not when defended.",
+    "promptUpright": "What small ritual lets you savor the life you’ve built?",
+    "promptReversed": "How could you let contentment count as success?"
   },
   {
     "key": "pentacles_10",
@@ -781,8 +883,10 @@ window.DECK =
     "imgReversed": "images/pentacles_10_r.jpg",
     "upright": "",
     "reversed": "",
-    "uprightLong": "",
-    "reversedLong": ""
+    "uprightLong": "Legacy, stability, and community wealth. You’re benefiting from long-term effort—yours or your ancestors’. Invest in sustainability: finances, health, and relationships that outlast trends. Share knowledge; mentor or collaborate. Prosperity fulfilled is prosperity distributed.",
+    "reversedLong": "Reversed, insecurity or family tension disrupts stability. Clarify shared goals; redefine success collectively. True legacy is value alignment, not material display.",
+    "promptUpright": "What tradition or practice would you like to pass forward?",
+    "promptReversed": "What core value could unify your circle again?"
   },
   {
     "key": "pentacles_page",
@@ -791,8 +895,10 @@ window.DECK =
     "imgReversed": "images/pentacles_page_r.jpg",
     "upright": "",
     "reversed": "",
-    "uprightLong": "",
-    "reversedLong": ""
+    "uprightLong": "Eagerness to learn defines this Page. You’re a student of the tangible—budgeting, health, craftsmanship, discipline. Progress comes through small, consistent improvements. Curiosity about “how things work” builds real confidence. Begin where you stand.",
+    "reversedLong": "Reversed, distraction or self-doubt delays growth. You might crave results without foundation. Recommit to basics; humility accelerates competence. Progress hidden is still progress.",
+    "promptUpright": "What skill would you enjoy mastering slowly?",
+    "promptReversed": "What first step could turn intention into practice today?"
   },
   {
     "key": "pentacles_knight",
@@ -801,8 +907,10 @@ window.DECK =
     "imgReversed": "images/pentacles_knight_r.jpg",
     "upright": "",
     "reversed": "",
-    "uprightLong": "",
-    "reversedLong": ""
+    "uprightLong": "Steadfast effort wins the marathon. This Knight moves methodically, building trust through reliability. Discipline now outperforms excitement. Protect routine from boredom by remembering purpose—every small task secures the larger vision.",
+    "reversedLong": "Reversed, stagnation or rigidity replaces steady growth. You may feel uninspired or resistant to change. Infuse variation without abandoning commitment: new tools, fresh environment, minor upgrades. Adaptation sustains diligence.",
+    "promptUpright": "Which repetitive action quietly guarantees your long-term success?",
+    "promptReversed": "What fresh element could renew your consistency?"
   },
   {
     "key": "pentacles_queen",
@@ -811,8 +919,10 @@ window.DECK =
     "imgReversed": "images/pentacles_queen_r.jpg",
     "upright": "",
     "reversed": "",
-    "uprightLong": "",
-    "reversedLong": ""
+    "uprightLong": "The Queen harmonizes practicality and nurture. She builds comfort for herself and others through organization, patience, and warmth. Caregiving becomes empowerment when balanced with self-care. Domestic or financial security blossoms through mindful stewardship.",
+    "reversedLong": "Reversed, overextension depletes resources. You may nurture others while neglecting rest or pleasure. Reinvest in your own body and home first; replenishment multiplies generosity.",
+    "promptUpright": "What small act of care could make your environment feel more supportive?",
+    "promptReversed": "How can you treat your wellbeing as non-negotiable?"
   },
   {
     "key": "pentacles_king",
@@ -821,7 +931,9 @@ window.DECK =
     "imgReversed": "images/pentacles_king_r.jpg",
     "upright": "",
     "reversed": "",
-    "uprightLong": "",
-    "reversedLong": ""
+    "uprightLong": "This King masters stability with generosity. Leadership here means creating systems that sustain others. You’ve proven capability—now focus on legacy: mentorship, ethical growth, long-range planning. Wealth is stewardship, not possession. Ground ambition in gratitude and patience.",
+    "reversedLong": "",
+    "promptUpright": "How can your success uplift others sustainably?",
+    "promptReversed": "What could you release to make success feel peaceful again?"
   }
-];
+]
