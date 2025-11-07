@@ -82,7 +82,7 @@ window.DECK =
     "uprightLong": "The Lovers isn’t only about romance — it’s about values in alignment. Every relationship, goal, or decision mirrors how honestly you’re living your priorities. When upright, it suggests your heart and mind are ready to cooperate: you can choose what feels right and makes sense. This card encourages integrity — making commitments that support your well‑being, not drain it. Evaluate your yeses and ensure they reflect your deeper truth, not obligation. Harmony grows when actions match beliefs. Choose the option that lets you respect yourself in the morning.",
     "reversedLong": "Reversed, The Lovers highlights inner contradiction — saying yes out of fear of loss or guilt rather than genuine desire. It can also indicate people‑pleasing or neglecting your own voice. Press pause on big decisions and realign with your values. Real love (self, romantic, or professional) thrives on transparency, not compliance. Return to what matters, then choose.",
     "promptUpright": "What choice would make you feel most at peace with yourself tomorrow morning?",
-    "promptReversed": "Where might you be mistaking agreement for harmony?”
+    "promptReversed": "Where might you be mistaking agreement for harmony?"
   },
   {
     "key": "major_07",
@@ -94,7 +94,7 @@ window.DECK =
     "uprightLong": "The Chariot represents self‑direction through focus and discipline. Progress happens when emotion and logic pull together, not apart. Define a target clearly — even a small one — and move toward it steadily, adjusting rather than doubting. Obstacles become training grounds for mastery. Determination here is emotional intelligence in motion: acknowledge frustration, then steer anyway. Decide, articulate, advance.",
     "reversedLong": "Reversed, the Chariot warns of burnout, distraction, or chasing goals that no longer fit. Movement without direction leads to fatigue that feels like failure. Pause and re‑evaluate the map: is your destination still yours, or inherited from someone else’s expectations? Real control is the ability to redirect. Choose a truer aim and go again.",
     "promptUpright": "What single objective deserves your full drive this week?",
-    "promptReversed": "What goal could you release to regain genuine motivation?”
+    "promptReversed": "What goal could you release to regain genuine motivation?"
   },
   {
     "key": "major_08",
@@ -118,7 +118,7 @@ window.DECK =
     "uprightLong": "The Hermit honors solitude as a tool, not a punishment. Pull back to analyze your direction and motives. Reflection brings efficiency — you stop solving the wrong problem. Journaling, meditation, or quiet study can clarify what no meeting ever could. True insight forms when stimulation drops. Withdraw long enough to realign your path with your inner truth, then re‑engage with intention.",
     "reversedLong": "Reversed, The Hermit points to isolation, cynicism, or burnout disguised as independence. If you’ve been carrying wisdom alone, share it; if you’ve been hiding, step out. Growth requires exchange. Balance introspection with connection so reflection turns into contribution. Ask for one conversation that invites you back into the world.",
     "promptUpright": "When was the last time silence taught you something useful?",
-    "promptReversed": "What insight could you express aloud to someone who needs it too?”
+    "promptReversed": "What insight could you express aloud to someone who needs it too?"
   },
   {
     "key": "major_10",
@@ -130,7 +130,7 @@ window.DECK =
     "uprightLong": "The Wheel of Fortune teaches flexibility. Life shifts — success, failure, calm, chaos — but your power lies in adaptation. Upright, it signals a turning point or streak of synchronicity: patterns align when you respond instead of react. Notice timing, seize opportunities, and accept that change doesn’t owe explanation. Flow with it consciously; prepare, then say yes.",
     "reversedLong": "Reversed, the Wheel shows resistance to change or repeating cycles. You might be replaying an old lesson because you haven’t integrated it yet. Instead of blaming luck, examine patterns — what decision keeps resetting the game? Recognizing it is liberation. Growth resumes once accountability replaces frustration. Choose differently on purpose.",
     "promptUpright": "What new possibility is asking you to say “yes” before you feel ready?",
-    "promptReversed": "What recurring situation is quietly asking for a different response this time?”
+    "promptReversed": "What recurring situation is quietly asking for a different response this time?"
   },
   {
     "key": "major_11",
@@ -262,7 +262,7 @@ window.DECK =
     "uprightLong": "The World signifies completion, mastery, and integration. You’ve reached a milestone and can finally see the coherence behind past struggles. Celebrate the closure and the wisdom it brings. This is not an end but a pause before renewal — every ending seeds a new Fool’s journey. Recognize yourself as whole, not just achieving but understanding. Mark the moment so your body remembers it.",
     "reversedLong": "Reversed, The World suggests almost‑finished business or lingering doubt after success. You may minimize achievements or avoid closure out of fear of emptiness. Take time to acknowledge the finish — integration matters as much as ambition. Only then can new cycles begin cleanly. Do the last small thing that makes it complete."
     "promptUpright": "What ritual could help you honor how far you’ve come?",
-    "promptReversed": "What would “done” look like if you let it feel complete?”*?
+    "promptReversed": "What would “done” look like if you let it feel complete?"
   },
   {
     "key": "wands_ace",
