@@ -187,7 +187,7 @@ window.DECK = [
     "upright": "Traditional: attachment, temptation, shadow patterns. Inner reading: you’re not trapped—the chain is unlatched. Gentle prompt: What comfort is costing you clarity, and how could you soothe differently?",
     "reversed": "Traditional: release, reclaiming power, detachment. Inner reading: the spell breaks when named. Gentle prompt: What tiny act of freedom could you gift yourself today?",
     "uprightLong": "The Devil illuminates attachment — habits, relationships, or mindsets you feel dependent on. It’s not inherently evil; it’s the pattern that once protected you but now restricts you. Awareness is the key to liberation. Identify the comfort that’s turned into a cage — consumption, control, comparison, or approval. Once named, its power weakens. Replace the habit with one that meets the same need in a healthier way. Freedom grows with every conscious choice.",
-    "reversedLong": "Reversed, The Devil signals release — or the moment right before it. You’re seeing through illusions that kept you small. Freedom requires compassion: forgive the version of you who clung to survival mechanisms. Move forward without shame. Each aligned action breaks the old contract and strengthens trust in yourself."
+    "reversedLong": "Reversed, The Devil signals release — or the moment right before it. You’re seeing through illusions that kept you small. Freedom requires compassion: forgive the version of you who clung to survival mechanisms. Move forward without shame. Each aligned action breaks the old contract and strengthens trust in yourself.",
     "promptUpright": "What recurring behavior feels good short-term but erodes peace long-term?",
     "promptReversed": "What tiny action could prove to yourself that you’re already freer than before?"
   },
@@ -199,7 +199,7 @@ window.DECK = [
     "upright": "Traditional: upheaval, revelation, breakdown. Inner reading: truth clears false structures. Gentle prompt: What honesty would you rather face than keep balancing rubble?",
     "reversed": "Traditional: fear of change, delayed collapse. Inner reading: gentle demolition beats sudden shock. Gentle prompt: What can you dismantle kindly before it falls loudly?",
     "uprightLong": "The Tower represents necessary disruption — the collapse of what no longer serves truth. It’s the moment when denial can’t hold weight anymore. Though shocking, it’s liberation in disguise. When structures break, they make space for integrity. Let go of control and face change with open eyes. This might mean an emotional breakthrough, sudden realization, or ending you didn’t plan for. Accept the clarity that chaos offers — after the dust settles, what remains is real.",
-    "reversedLong": "Reversed, the Tower suggests resistance to transformation or denial of a brewing problem. Avoiding small adjustments invites bigger shocks later. Choose conscious change instead of waiting for collapse. The discomfort you’re avoiding is temporary — the relief afterward is lasting. Make one voluntary change now."
+    "reversedLong": "Reversed, the Tower suggests resistance to transformation or denial of a brewing problem. Avoiding small adjustments invites bigger shocks later. Choose conscious change instead of waiting for collapse. The discomfort you’re avoiding is temporary — the relief afterward is lasting. Make one voluntary change now.",
     "promptUpright": "What truth are you now strong enough to face without defense?",
     "promptReversed": "What could you dismantle voluntarily before life does it for you?" 
   },
@@ -211,7 +211,7 @@ window.DECK = [
     "upright": "Traditional: hope, healing, openness. Inner reading: tenderness is strength. Gentle prompt: Where can you be 5% more receptive to support or grace?",
     "reversed": "Traditional: doubt, cynicism, dimmed faith. Inner reading: hope needs care, not proof. Gentle prompt: What tiny sign of life can you water today?",
     "uprightLong": "The Star signals healing, faith, and renewed optimism. After turmoil, hope returns — not naïve but informed. You’re reminded that vulnerability attracts restoration. Show your authentic self without editing for approval. This is a time for self‑compassion and gentle reconstruction: nourish your body, reconnect with inspiration, and practice gratitude in small acts. Healing isn’t linear, but every honest breath rebuilds confidence.",
-    "reversedLong": "Reversed, the Star warns that discouragement or cynicism has dimmed your light. You may be focusing on evidence of failure instead of progress. Reconnect to purpose through gratitude journaling, movement, or art. Reignite faith through micro‑trust — noticing what is working. Light returns through attention, not waiting."
+    "reversedLong": "Reversed, the Star warns that discouragement or cynicism has dimmed your light. You may be focusing on evidence of failure instead of progress. Reconnect to purpose through gratitude journaling, movement, or art. Reignite faith through micro‑trust — noticing what is working. Light returns through attention, not waiting.",
     "promptUpright": "What small kindness toward yourself could reopen your belief in possibility?",
     "promptReversed": "What would hope look like if it were quiet but steady?"
   },
@@ -223,7 +223,7 @@ window.DECK = [
     "upright": "Traditional: dreams, intuition, the unknown. Inner reading: walk by feel; clarity is dawning. Gentle prompt: What feeling deserves a name before a plan?",
     "reversed": "Traditional: confusion lifting, fears examined. Inner reading: test the story with one fact. Gentle prompt: What assumption can you kindly verify?",
     "uprightLong": "The Moon invites you to explore uncertainty with curiosity. Your subconscious speaks through intuition, dreams, or emotions that don’t make linear sense. Don’t rush to decode them; just notice patterns. Confusion isn’t failure — it’s a sign that growth is happening below the surface. Create space for imagination and reflection, but keep grounding habits nearby. Trust gradual clarity.",
-    "reversedLong": "Reversed, The Moon indicates emerging clarity — illusions are dissolving, revealing truth beneath fear. Yet, the process may feel disorienting. Ground yourself in routine while re‑evaluating assumptions. What you thought was danger might just be uncertainty. Distinguish intuition from anxiety through calm observation and small experiments."
+    "reversedLong": "Reversed, The Moon indicates emerging clarity — illusions are dissolving, revealing truth beneath fear. Yet, the process may feel disorienting. Ground yourself in routine while re‑evaluating assumptions. What you thought was danger might just be uncertainty. Distinguish intuition from anxiety through calm observation and small experiments.",
     "promptUpright": "What emotion feels mysterious but deserves patient attention instead of judgment?",
     "promptReversed": "Which belief, once questioned, could restore your peace of mind?"
   },
@@ -235,7 +235,7 @@ window.DECK = [
     "upright": "Traditional: joy, vitality, clarity. Inner reading: life wants to warm you. Gentle prompt: What simple pleasure could you allow without earning it first?",
     "reversed": "Traditional: temporary clouds, subdued optimism. Inner reading: the light is present but blocked. Gentle prompt: What small action would let more light in today?",
     "uprightLong": "The Sun radiates confidence, clarity, and vitality. It’s the moment you realize your joy doesn’t need justification. This card encourages full self‑expression — speak proudly, laugh loudly, live visibly. Success grows where authenticity shines without apology. Celebrate progress, however modest. Happiness strengthens resilience more than self‑criticism ever could. Choose activities that feel like sunshine to your system.",
-    "reversedLong": "Reversed, The Sun reveals temporary dimness — fatigue, self‑doubt, or creative block. You may be underestimating your achievements or comparing your pace to others. Step into sunlight literally or metaphorically: movement, connection, or play. Reignite positivity through physical engagement, not thought. Joy returns when you act like it’s possible."
+    "reversedLong": "Reversed, The Sun reveals temporary dimness — fatigue, self‑doubt, or creative block. You may be underestimating your achievements or comparing your pace to others. Step into sunlight literally or metaphorically: movement, connection, or play. Reignite positivity through physical engagement, not thought. Joy returns when you act like it’s possible.",
     "promptUpright": "What moment of lightness could you let yourself feel fully today?",
     "promptReversed": "What activity always brightens you, no matter your mood?"
   },
@@ -247,7 +247,7 @@ window.DECK = [
     "upright": "Traditional: awakening, forgiveness, calling. Inner reading: answer the inner trumpet. Gentle prompt: What truth are you ready to rise to without punishing your past self?",
     "reversed": "Traditional: self-doubt, delay, harsh self-judgment. Inner reading: you don’t need a verdict to begin again. Gentle prompt: What compassionate reframe would let you step forward now?",
     "uprightLong": "Judgement marks awakening — seeing your life with new clarity and forgiving the past version of yourself. It’s a call to act on what you’ve learned, not just think about it. Self‑forgiveness transforms guilt into wisdom. Recognize how far you’ve come, then decide what the next evolution requires. Let go of regret; you can’t heal by punishing yourself. Answer the call with a specific, life‑affirming step.",
-    "reversedLong": "Reversed, Judgement suggests hesitation to accept growth or guilt for changing. You may doubt you’re ready for a new stage or fear losing belonging by evolving. But staying small helps no one. Review lessons, acknowledge mistakes, then act. Redemption isn’t earned — it’s allowed. Choose the next right step and let it redefine you."
+    "reversedLong": "Reversed, Judgement suggests hesitation to accept growth or guilt for changing. You may doubt you’re ready for a new stage or fear losing belonging by evolving. But staying small helps no one. Review lessons, acknowledge mistakes, then act. Redemption isn’t earned — it’s allowed. Choose the next right step and let it redefine you.",
     "promptUpright": "What decision could honor who you’ve become rather than who you were?",
     "promptReversed": "What would forgiving yourself make space to begin?"
   },
@@ -259,7 +259,7 @@ window.DECK = [
     "upright": "Traditional: completion, wholeness, integration. Inner reading: the cycle closes; you have become the lesson. Gentle prompt: What celebration or closure ritual would honor this finish?",
     "reversed": "Traditional: almost there, loose ends, delay. Inner reading: one stitch remains. Gentle prompt: What final tidy action would free you to begin the next chapter cleanly?",
     "uprightLong": "The World signifies completion, mastery, and integration. You’ve reached a milestone and can finally see the coherence behind past struggles. Celebrate the closure and the wisdom it brings. This is not an end but a pause before renewal — every ending seeds a new Fool’s journey. Recognize yourself as whole, not just achieving but understanding. Mark the moment so your body remembers it.",
-    "reversedLong": "Reversed, The World suggests almost‑finished business or lingering doubt after success. You may minimize achievements or avoid closure out of fear of emptiness. Take time to acknowledge the finish — integration matters as much as ambition. Only then can new cycles begin cleanly. Do the last small thing that makes it complete."
+    "reversedLong": "Reversed, The World suggests almost‑finished business or lingering doubt after success. You may minimize achievements or avoid closure out of fear of emptiness. Take time to acknowledge the finish — integration matters as much as ambition. Only then can new cycles begin cleanly. Do the last small thing that makes it complete.",
     "promptUpright": "What ritual could help you honor how far you’ve come?",
     "promptReversed": "What would “done” look like if you let it feel complete?"
   },
