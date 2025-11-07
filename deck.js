@@ -9,7 +9,7 @@ window.DECK =
     "reversed": "Traditional: recklessness, hesitation, poor planning. Inner reading: fear dresses up as perfectionism. You can begin imperfectly. Gentle prompt: What small safeguard would let you take the first honest step?",
     "uprightLong": "The Fool asks you to act before certainty appears. Every new chapter starts with partial information, and waiting for perfect readiness often hides fear of imperfection. This energy supports experimentation: signing up for that class, reaching out to a mentor, testing an idea instead of analyzing it endlessly. The Fool reminds you that feedback is the teacher readiness could never be. Embrace curiosity as your navigation tool — it will lead you to experiences logic can’t plan. Trust yourself to adapt along the way; agility matters more than guarantees. Make a move small enough to feel safe but real enough to gather evidence. You don’t need confidence to begin; you need a first step.",
     "reversedLong": "When The Fool appears reversed, the leap forward feels tangled in fear, procrastination, or the illusion that you must be ‘ready’ before moving. It reveals a moment when spontaneity meets hesitation — when your curiosity has to push through overthinking. This energy often arises when you’re protecting yourself from imagined failure rather than actual danger. It might also signal recklessness: acting without grounding or direction. Both are sides of the same coin — one holds back, the other rushes in. The antidote is intention. Pause long enough to name your purpose, choose one modest action, and create a simple safeguard. Momentum begins by proving to yourself you can take the smallest true step.",
-    "prompt": "What one small action could you take today that says, *“I’m willing to find out"
+    "prompt": "What one small action could you take today that says, *“I’m willing to find out”*?
   },
   {
     "key": "major_01",
@@ -20,7 +20,7 @@ window.DECK =
     "reversed": "Traditional: manipulation, untapped potential, misalignment. Inner reading: your energy leaks in too many directions. Re-center before acting. Gentle prompt: What will you lovingly set down so your yes can be wholehearted?",
     "uprightLong": "The Magician turns ideas into matter through focus. It teaches that competence grows from commitment, not confidence. You already have tools — skills, contacts, time — but they scatter without aim. Choose one project, define success in your language, and act consistently. Energy follows direction. Cut noise: one capture system, one workspace, one daily ritual. Translate intention into a calendar block and a checklist you’ll actually use. Creation here is iterative: build, test, refine. Speak your plan aloud to make it real and recruit support. You’re not waiting for permission; you’re practicing power by practicing.",
     "reversedLong": "Reversed, The Magician reveals leaks in attention or honesty. You may be multitasking yourself into mediocrity or selling an image that drains integrity. Re-ground in clarity: what outcome truly matters and why? Simplify tools, detach from performing productivity, and rebuild credibility with yourself through follow‑through. Replace five open projects with one finished deliverable. If manipulation is present — yours or others’ — step back, tell the truth, and let results speak. Power returns when alignment does.",
-    "prompt": "What one small action could you take today that says, *“I’m willing to find out"
+    "prompt": "Which current idea deserves your full attention for the next seven days?"
   },
   {
     "key": "major_02",
@@ -31,7 +31,7 @@ window.DECK =
     "reversed": "Traditional: secrets, blocked intuition, surface noise. Inner reading: you’re scrolling past the whisper. Reduce noise, then listen again. Gentle prompt: What boundary could protect your inner yes/no today?",
     "uprightLong": "The High Priestess values pause over noise. In practice, this means trusting your evaluation before asking for ten more opinions. Insight ripens in silence — journaling, walking, or simply sitting with ambiguity. She reminds you that instinct is data collected by experience; give it credit. Choose a question, reduce inputs, and listen for the small, steady signal beneath anxiety. Acting from quiet confidence prevents external chaos from steering your choices. You don’t need to explain your knowing to everyone; you need to honor it with one clear step.",
     "reversedLong": "When reversed, distractions overpower intuition. You may be consuming content instead of creating understanding. The High Priestess reversed asks for digital and emotional decluttering — fewer inputs, clearer voice. Step back from the feed, postpone nonessential advice, and create a container for your own perspective to form. Slow information intake until your inner clarity catches up; then move with conviction.",
-    "prompt": "What one small action could you take today that says, *“I’m willing to find out"
+    "prompt": "What boundary (screen, conversation, or thought loop) could protect your *inner signal* today?"
   },
   {
     "key": "major_03",
@@ -42,7 +42,7 @@ window.DECK =
     "reversed": "Traditional: creative block, overgiving, neglect. Inner reading: generosity needs roots. Refill first, then share. Gentle prompt: Where do you need to mother yourself before mothering the world?",
     "uprightLong": "The Empress teaches sustainable productivity: growth through care, not pressure. Creativity flourishes when your nervous system feels safe. Eat, rest, hydrate, bring beauty into your space — these are strategic acts, not indulgence. The more nourished you feel, the more naturally you produce meaningful work and relationships. Replace punishment with pacing. Treat your body as a collaborator, not a vehicle you drive to empty. Nurture environments and routines that let ideas germinate without force.",
     "reversedLong": "Reversed, The Empress highlights over‑giving or depletion. You might nurture others while starving your own soil. Pause any caretaking that breeds resentment. Replenish resources before offering more. Audit your yeses: which are generous, which are fearful? Creativity returns when you are resourced. Productivity built on exhaustion collapses; kindness restores momentum.",
-    "prompt": "What one small action could you take today that says, *“I’m willing to find out"
+    "prompt": "Where can you replace giving with receiving without guilt?"
   },
   {
     "key": "major_04",
