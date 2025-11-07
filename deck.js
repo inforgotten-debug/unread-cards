@@ -70,7 +70,7 @@ window.DECK =
     "uprightLong": "The Hierophant represents learning frameworks — mentors, courses, traditions — that transmit tested wisdom. Practical spirituality means using structure to deepen meaning, not to obey blindly. Study fundamentals, then adapt them to your context. Seek teachers who empower autonomy. Ritualize what works: a weekly review, a morning practice, an accountability partner. Let form serve freedom.",
     "reversedLong": "Reversed, the card challenges conformity. Outdated systems may stifle growth; questioning them is progress, not rebellion. Keep the principle, redesign the ritual. Choose mentors who welcome your voice. Authenticity matters more than approval. Write a new rule that honors the same value with more life in it.",
     "promptUpright": "Which proven method or mentor could strengthen your current learning curve?",
-    "promptReversed": "What inherited belief or routine could you update to match who you’ve become?”
+    "promptReversed": "What inherited belief or routine could you update to match who you’ve become?"
   },
   {
     "key": "major_06",
