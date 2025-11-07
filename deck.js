@@ -9,7 +9,8 @@ window.DECK =
     "reversed": "Traditional: recklessness, hesitation, poor planning. Inner reading: fear dresses up as perfectionism. You can begin imperfectly. Gentle prompt: What small safeguard would let you take the first honest step?",
     "uprightLong": "The Fool asks you to act before certainty appears. Every new chapter starts with partial information, and waiting for perfect readiness often hides fear of imperfection. This energy supports experimentation: signing up for that class, reaching out to a mentor, testing an idea instead of analyzing it endlessly. The Fool reminds you that feedback is the teacher readiness could never be. Embrace curiosity as your navigation tool — it will lead you to experiences logic can’t plan. Trust yourself to adapt along the way; agility matters more than guarantees. Make a move small enough to feel safe but real enough to gather evidence. You don’t need confidence to begin; you need a first step.",
     "reversedLong": "When The Fool appears reversed, the leap forward feels tangled in fear, procrastination, or the illusion that you must be ‘ready’ before moving. It reveals a moment when spontaneity meets hesitation — when your curiosity has to push through overthinking. This energy often arises when you’re protecting yourself from imagined failure rather than actual danger. It might also signal recklessness: acting without grounding or direction. Both are sides of the same coin — one holds back, the other rushes in. The antidote is intention. Pause long enough to name your purpose, choose one modest action, and create a simple safeguard. Momentum begins by proving to yourself you can take the smallest true step.",
-    "prompt": "What one small action could you take today that says, *“I’m willing to find out”*?
+    "promptUpright": "What one small action could you take today that says, *“I’m willing to find out”*?",
+    "promptReversed": "What simple precaution would make taking the first real step feel safe enough?"
   },
   {
     "key": "major_01",
@@ -20,7 +21,8 @@ window.DECK =
     "reversed": "Traditional: manipulation, untapped potential, misalignment. Inner reading: your energy leaks in too many directions. Re-center before acting. Gentle prompt: What will you lovingly set down so your yes can be wholehearted?",
     "uprightLong": "The Magician turns ideas into matter through focus. It teaches that competence grows from commitment, not confidence. You already have tools — skills, contacts, time — but they scatter without aim. Choose one project, define success in your language, and act consistently. Energy follows direction. Cut noise: one capture system, one workspace, one daily ritual. Translate intention into a calendar block and a checklist you’ll actually use. Creation here is iterative: build, test, refine. Speak your plan aloud to make it real and recruit support. You’re not waiting for permission; you’re practicing power by practicing.",
     "reversedLong": "Reversed, The Magician reveals leaks in attention or honesty. You may be multitasking yourself into mediocrity or selling an image that drains integrity. Re-ground in clarity: what outcome truly matters and why? Simplify tools, detach from performing productivity, and rebuild credibility with yourself through follow‑through. Replace five open projects with one finished deliverable. If manipulation is present — yours or others’ — step back, tell the truth, and let results speak. Power returns when alignment does.",
-    "prompt": "Which current idea deserves your full attention for the next seven days?"
+    "promptUpright": "Which current idea deserves your full attention for the next seven days?",
+    "promptReversed": "What promise to yourself needs to be kept before starting something new?"
   },
   {
     "key": "major_02",
@@ -31,7 +33,8 @@ window.DECK =
     "reversed": "Traditional: secrets, blocked intuition, surface noise. Inner reading: you’re scrolling past the whisper. Reduce noise, then listen again. Gentle prompt: What boundary could protect your inner yes/no today?",
     "uprightLong": "The High Priestess values pause over noise. In practice, this means trusting your evaluation before asking for ten more opinions. Insight ripens in silence — journaling, walking, or simply sitting with ambiguity. She reminds you that instinct is data collected by experience; give it credit. Choose a question, reduce inputs, and listen for the small, steady signal beneath anxiety. Acting from quiet confidence prevents external chaos from steering your choices. You don’t need to explain your knowing to everyone; you need to honor it with one clear step.",
     "reversedLong": "When reversed, distractions overpower intuition. You may be consuming content instead of creating understanding. The High Priestess reversed asks for digital and emotional decluttering — fewer inputs, clearer voice. Step back from the feed, postpone nonessential advice, and create a container for your own perspective to form. Slow information intake until your inner clarity catches up; then move with conviction.",
-    "prompt": "What boundary (screen, conversation, or thought loop) could protect your *inner signal* today?"
+    "promptUpright": "Where could you replace seeking advice with listening inward for one day?",
+    "promptReversed": "What boundary (screen, conversation, or thought loop) could protect your inner signal today?"
   },
   {
     "key": "major_03",
@@ -42,7 +45,8 @@ window.DECK =
     "reversed": "Traditional: creative block, overgiving, neglect. Inner reading: generosity needs roots. Refill first, then share. Gentle prompt: Where do you need to mother yourself before mothering the world?",
     "uprightLong": "The Empress teaches sustainable productivity: growth through care, not pressure. Creativity flourishes when your nervous system feels safe. Eat, rest, hydrate, bring beauty into your space — these are strategic acts, not indulgence. The more nourished you feel, the more naturally you produce meaningful work and relationships. Replace punishment with pacing. Treat your body as a collaborator, not a vehicle you drive to empty. Nurture environments and routines that let ideas germinate without force.",
     "reversedLong": "Reversed, The Empress highlights over‑giving or depletion. You might nurture others while starving your own soil. Pause any caretaking that breeds resentment. Replenish resources before offering more. Audit your yeses: which are generous, which are fearful? Creativity returns when you are resourced. Productivity built on exhaustion collapses; kindness restores momentum.",
-    "prompt": "Where can you replace giving with receiving without guilt?"
+    "promptUpright": "What simple physical comfort could help your creativity breathe today?",
+    "promptReversed": "Where can you replace giving with receiving without guilt?"
   },
   {
     "key": "major_04",
@@ -53,7 +57,8 @@ window.DECK =
     "reversed": "Traditional: rigidity, control, rebellion. Inner reading: control protects anxiety, not truth. Switch from force to framework. Gentle prompt: What rule can be softened without losing safety?",
     "uprightLong": "The Emperor embodies systems that protect freedom. Discipline, scheduling, and clear roles create room for creativity to roam safely. Set boundaries that define where work ends and rest begins. Leadership here means consistency, not dominance. Build habits that carry you on low‑motivation days: a planning ritual, a time block for deep work, a daily shutdown routine. Good structure feels like relief.",
     "reversedLong": "When reversed, control morphs into rigidity. You may cling to plans to avoid uncertainty or resist authority out of pride. Flexibility is strength in motion. Review your rules: keep those that bring stability, release those that suffocate flow. Update your system to match the season you’re in, not the one you miss.",
-    "prompt": "What one small action could you take today that says, *“I’m willing to find out"
+    "promptUpright": "What small structure would make tomorrow smoother automatically?",
+    "promptReversed": "Which personal rule could you relax this week to regain ease?"
   },
   {
     "key": "major_05",
@@ -64,7 +69,8 @@ window.DECK =
     "reversed": "Traditional: nonconformity, dogma questioned. Inner reading: it’s time to keep the meaning and release the rule. Gentle prompt: Which inherited belief no longer serves your living truth?",
     "uprightLong": "The Hierophant represents learning frameworks — mentors, courses, traditions — that transmit tested wisdom. Practical spirituality means using structure to deepen meaning, not to obey blindly. Study fundamentals, then adapt them to your context. Seek teachers who empower autonomy. Ritualize what works: a weekly review, a morning practice, an accountability partner. Let form serve freedom.",
     "reversedLong": "Reversed, the card challenges conformity. Outdated systems may stifle growth; questioning them is progress, not rebellion. Keep the principle, redesign the ritual. Choose mentors who welcome your voice. Authenticity matters more than approval. Write a new rule that honors the same value with more life in it.",
-    "prompt": "What one small action could you take today that says, *“I’m willing to find out"
+    "promptUpright": "Which proven method or mentor could strengthen your current learning curve?",
+    "promptReversed": "What inherited belief or routine could you update to match who you’ve become?”
   },
   {
     "key": "major_06",
@@ -75,7 +81,8 @@ window.DECK =
     "reversed": "Traditional: misalignment, indecision, disharmony. Inner reading: when values blur, choices stall. Re-choose your why. Gentle prompt: What value of yours wants to be honored first?",
     "uprightLong": "The Lovers isn’t only about romance — it’s about values in alignment. Every relationship, goal, or decision mirrors how honestly you’re living your priorities. When upright, it suggests your heart and mind are ready to cooperate: you can choose what feels right and makes sense. This card encourages integrity — making commitments that support your well‑being, not drain it. Evaluate your yeses and ensure they reflect your deeper truth, not obligation. Harmony grows when actions match beliefs. Choose the option that lets you respect yourself in the morning.",
     "reversedLong": "Reversed, The Lovers highlights inner contradiction — saying yes out of fear of loss or guilt rather than genuine desire. It can also indicate people‑pleasing or neglecting your own voice. Press pause on big decisions and realign with your values. Real love (self, romantic, or professional) thrives on transparency, not compliance. Return to what matters, then choose.",
-    "prompt": "What one small action could you take today that says, *“I’m willing to find out"
+    "promptUpright": "What choice would make you feel most at peace with yourself tomorrow morning?",
+    "promptReversed": "Where might you be mistaking agreement for harmony?”
   },
   {
     "key": "major_07",
@@ -86,7 +93,8 @@ window.DECK =
     "reversed": "Traditional: lack of control, drift, force without focus. Inner reading: speed without aim is stress. Gentle prompt: What destination would make saying no easier today?",
     "uprightLong": "The Chariot represents self‑direction through focus and discipline. Progress happens when emotion and logic pull together, not apart. Define a target clearly — even a small one — and move toward it steadily, adjusting rather than doubting. Obstacles become training grounds for mastery. Determination here is emotional intelligence in motion: acknowledge frustration, then steer anyway. Decide, articulate, advance.",
     "reversedLong": "Reversed, the Chariot warns of burnout, distraction, or chasing goals that no longer fit. Movement without direction leads to fatigue that feels like failure. Pause and re‑evaluate the map: is your destination still yours, or inherited from someone else’s expectations? Real control is the ability to redirect. Choose a truer aim and go again.",
-    "prompt": "What one small action could you take today that says, *“I’m willing to find out"
+    "promptUpright": "What single objective deserves your full drive this week?",
+    "promptReversed": "What goal could you release to regain genuine motivation?”
   },
   {
     "key": "major_08",
@@ -97,7 +105,8 @@ window.DECK =
     "reversed": "Traditional: self-doubt, fragility, harshness. Inner reading: inner critic is tired, not wise. Gentle prompt: What phrase would a loving friend offer you right now?",
     "uprightLong": "Strength speaks of resilience grounded in calm. It’s not about domination but about meeting fear with patience. Emotional regulation — steady breath, kind self‑talk, gentle persistence — tames chaos faster than force. When you hold your ground kindly, confidence grows from evidence, not hype. This card invites daily practices that anchor you in self‑respect: stretching, mindful breaks, honest boundaries. Courage is quiet and repeatable.",
     "reversedLong": "Reversed, Strength signals self‑criticism or exhaustion. You may feel weak because you’ve been battling too hard for too long. Courage now means rest, boundaries, and acceptance of limits. Power returns when kindness does. Let the inner critic nap; it’s not your motivator, just a tired guard. Choose restorative actions that prove you’re on your own side.",
-    "prompt": "What one small action could you take today that says, *“I’m willing to find out"
+    "promptUpright": "What gentle action today would remind you of your own capability?",
+    "promptReversed": "How could you speak to yourself as you would to a beloved friend who’s worn out?"
   },
   {
     "key": "major_09",
@@ -108,7 +117,8 @@ window.DECK =
     "reversed": "Traditional: isolation, avoidance, withdrawal. Inner reading: alone has become hiding. Re-enter gently. Gentle prompt: Who is a safe person to share one honest sentence with?",
     "uprightLong": "The Hermit honors solitude as a tool, not a punishment. Pull back to analyze your direction and motives. Reflection brings efficiency — you stop solving the wrong problem. Journaling, meditation, or quiet study can clarify what no meeting ever could. True insight forms when stimulation drops. Withdraw long enough to realign your path with your inner truth, then re‑engage with intention.",
     "reversedLong": "Reversed, The Hermit points to isolation, cynicism, or burnout disguised as independence. If you’ve been carrying wisdom alone, share it; if you’ve been hiding, step out. Growth requires exchange. Balance introspection with connection so reflection turns into contribution. Ask for one conversation that invites you back into the world.",
-    "prompt": "What one small action could you take today that says, *“I’m willing to find out"
+    "promptUpright": "When was the last time silence taught you something useful?",
+    "promptReversed": "What insight could you express aloud to someone who needs it too?”
   },
   {
     "key": "major_10",
@@ -119,7 +129,8 @@ window.DECK =
     "reversed": "Traditional: resistance to change, stagnation. Inner reading: clinging jams the wheel. Gentle prompt: What expectation can you release to let movement return?",
     "uprightLong": "The Wheel of Fortune teaches flexibility. Life shifts — success, failure, calm, chaos — but your power lies in adaptation. Upright, it signals a turning point or streak of synchronicity: patterns align when you respond instead of react. Notice timing, seize opportunities, and accept that change doesn’t owe explanation. Flow with it consciously; prepare, then say yes.",
     "reversedLong": "Reversed, the Wheel shows resistance to change or repeating cycles. You might be replaying an old lesson because you haven’t integrated it yet. Instead of blaming luck, examine patterns — what decision keeps resetting the game? Recognizing it is liberation. Growth resumes once accountability replaces frustration. Choose differently on purpose.",
-    "prompt": "What one small action could you take today that says, *“I’m willing to find out"
+    "promptUpright": "What new possibility is asking you to say “yes” before you feel ready?",
+    "promptReversed": "What recurring situation is quietly asking for a different response this time?”
   },
   {
     "key": "major_11",
@@ -130,7 +141,8 @@ window.DECK =
     "reversed": "Traditional: imbalance, denial, unfairness. Inner reading: avoidance has a cost. Repair is available. Gentle prompt: What small amends or boundary would restore balance?",
     "uprightLong": "Justice asks you to pause and assess fairness — not only toward others, but toward yourself. Upright, it represents accountability, balance, and transparency. Make decisions rooted in truth rather than habit. Sometimes the fairest outcome isn’t the easiest — it’s the one that restores integrity. If something feels off, it probably is. Gather facts, then act.",
     "reversedLong": "When reversed, Justice highlights bias, avoidance, or guilt clouding your clarity. You may be rationalizing rather than resolving. Step back, confront what you’ve postponed, and choose one specific corrective action. Even small acts of responsibility lift heavy emotional weight. Rebuild trust in your own judgment by following through.",
-    "prompt": "What one small action could you take today that says, *“I’m willing to find out"
+    "promptUpright": "What truth, once accepted, will make every future choice simpler?",
+    "promptReversed": "What unfinished correction could lighten your conscience right now?"
   },
   {
     "key": "major_12",
@@ -141,7 +153,8 @@ window.DECK =
     "reversed": "Traditional: stalling, martyrdom, stuckness. Inner reading: waiting has become avoiding. Gentle prompt: What decision would free your energy even if imperfect?",
     "uprightLong": "The Hanged Man represents stillness as strategy. By suspending immediate reaction, you open perspective. This pause allows new angles on an old issue — ones that movement would blur. Surrender here doesn’t mean defeat; it means patience while your understanding matures. Stop forcing the solution and let observation refine it. Sometimes waiting reveals that a problem doesn’t need solving at all.",
     "reversedLong": "Reversed, The Hanged Man signals stagnation — staying stuck long after insight has formed. Fear of change may disguise itself as ‘waiting for a sign.’ You already know what’s next; courage is the missing ingredient. Break inertia by choosing progress over perfection. Move with what you know.",
-    "prompt": "What one small action could you take today that says, *“I’m willing to find out"
+    "promptUpright": "Where might doing nothing for a day actually move things forward?",
+    "promptReversed": "What one decision could release the tension of endless reflection?"
   },
   {
     "key": "major_13",
@@ -152,7 +165,8 @@ window.DECK =
     "reversed": "Traditional: fear of change, stagnation, decay. Inner reading: you’re carrying what’s complete. Gentle prompt: What gentle goodbye would honor both what was and who you are now?",
     "uprightLong": "Death marks transformation disguised as ending. Something important — a project, relationship, belief — has completed its purpose. Mourning is natural, but staying attached traps energy meant for rebirth. Accept closure as compost: what decays feeds what’s next. Practically, this might mean letting go of a goal that no longer inspires or redefining success after loss. Renewal begins the moment you stop resisting change.",
     "reversedLong": "Reversed, Death points to avoidance of change. You might cling to comfort zones, delaying evolution. This is a slow suffocation — not tragedy, but hesitation. Choose transition intentionally rather than waiting for crisis to force it. The longer you resist, the heavier it becomes. Say goodbye kindly and step forward.",
-    "prompt": "What one small action could you take today that says, *“I’m willing to find out"
+    "promptUpright": "What chapter could you lovingly close to make space for something alive?",
+    "promptReversed": "What would saying goodbye free you to welcome next?"
   },
   {
     "key": "major_14",
@@ -163,7 +177,8 @@ window.DECK =
     "reversed": "Traditional: excess, extremes, imbalance. Inner reading: the pendulum is tired. Gentle prompt: What is one middle step between too much and too little?",
     "uprightLong": "Temperance invites equilibrium. It’s the art of moderation: blending discipline with ease, work with rest, self with others. You progress fastest by balancing extremes, not swinging between them. Integrate lessons instead of reacting to them. Balance isn’t achieved once — it’s maintained daily. Small, consistent harmony beats dramatic overhaul. Adjust inputs and pace until calm returns.",
     "reversedLong": "Reversed, Temperance warns of excess or burnout. You may be overcommitted or swinging wildly between indulgence and deprivation. Check routines and emotional diet — are they nourishing or numbing you? Real balance often looks simpler than ego allows. Subtract something today and let steadiness reappear.",
-    "prompt": "What one small action could you take today that says, *“I’m willing to find out"
+    "promptUpright": "What adjustment would make your pace more sustainable this week?",
+    "promptReversed": "What can you subtract today to return to calm effectiveness?"
   },
   {
     "key": "major_15",
@@ -174,6 +189,8 @@ window.DECK =
     "reversed": "Traditional: release, reclaiming power, detachment. Inner reading: the spell breaks when named. Gentle prompt: What tiny act of freedom could you gift yourself today?",
     "uprightLong": "The Devil illuminates attachment — habits, relationships, or mindsets you feel dependent on. It’s not inherently evil; it’s the pattern that once protected you but now restricts you. Awareness is the key to liberation. Identify the comfort that’s turned into a cage — consumption, control, comparison, or approval. Once named, its power weakens. Replace the habit with one that meets the same need in a healthier way. Freedom grows with every conscious choice.",
     "reversedLong": "Reversed, The Devil signals release — or the moment right before it. You’re seeing through illusions that kept you small. Freedom requires compassion: forgive the version of you who clung to survival mechanisms. Move forward without shame. Each aligned action breaks the old contract and strengthens trust in yourself."
+    "promptUpright": "What recurring behavior feels good short-term but erodes peace long-term?",
+    "promptReversed": "What tiny action could prove to yourself that you’re already freer than before?"
   },
   {
     "key": "major_16",
@@ -184,6 +201,8 @@ window.DECK =
     "reversed": "Traditional: fear of change, delayed collapse. Inner reading: gentle demolition beats sudden shock. Gentle prompt: What can you dismantle kindly before it falls loudly?",
     "uprightLong": "The Tower represents necessary disruption — the collapse of what no longer serves truth. It’s the moment when denial can’t hold weight anymore. Though shocking, it’s liberation in disguise. When structures break, they make space for integrity. Let go of control and face change with open eyes. This might mean an emotional breakthrough, sudden realization, or ending you didn’t plan for. Accept the clarity that chaos offers — after the dust settles, what remains is real.",
     "reversedLong": "Reversed, the Tower suggests resistance to transformation or denial of a brewing problem. Avoiding small adjustments invites bigger shocks later. Choose conscious change instead of waiting for collapse. The discomfort you’re avoiding is temporary — the relief afterward is lasting. Make one voluntary change now."
+    "promptUpright": "What truth are you now strong enough to face without defense?",
+    "promptReversed": "What could you dismantle voluntarily before life does it for you?" 
   },
   {
     "key": "major_17",
@@ -194,6 +213,8 @@ window.DECK =
     "reversed": "Traditional: doubt, cynicism, dimmed faith. Inner reading: hope needs care, not proof. Gentle prompt: What tiny sign of life can you water today?",
     "uprightLong": "The Star signals healing, faith, and renewed optimism. After turmoil, hope returns — not naïve but informed. You’re reminded that vulnerability attracts restoration. Show your authentic self without editing for approval. This is a time for self‑compassion and gentle reconstruction: nourish your body, reconnect with inspiration, and practice gratitude in small acts. Healing isn’t linear, but every honest breath rebuilds confidence.",
     "reversedLong": "Reversed, the Star warns that discouragement or cynicism has dimmed your light. You may be focusing on evidence of failure instead of progress. Reconnect to purpose through gratitude journaling, movement, or art. Reignite faith through micro‑trust — noticing what is working. Light returns through attention, not waiting."
+    "promptUpright": "What small kindness toward yourself could reopen your belief in possibility?",
+    "promptReversed": "What would hope look like if it were quiet but steady?"
   },
   {
     "key": "major_18",
@@ -204,6 +225,8 @@ window.DECK =
     "reversed": "Traditional: confusion lifting, fears examined. Inner reading: test the story with one fact. Gentle prompt: What assumption can you kindly verify?",
     "uprightLong": "The Moon invites you to explore uncertainty with curiosity. Your subconscious speaks through intuition, dreams, or emotions that don’t make linear sense. Don’t rush to decode them; just notice patterns. Confusion isn’t failure — it’s a sign that growth is happening below the surface. Create space for imagination and reflection, but keep grounding habits nearby. Trust gradual clarity.",
     "reversedLong": "Reversed, The Moon indicates emerging clarity — illusions are dissolving, revealing truth beneath fear. Yet, the process may feel disorienting. Ground yourself in routine while re‑evaluating assumptions. What you thought was danger might just be uncertainty. Distinguish intuition from anxiety through calm observation and small experiments."
+    "promptUpright": "What emotion feels mysterious but deserves patient attention instead of judgment?",
+    "promptReversed": "Which belief, once questioned, could restore your peace of mind?"
   },
   {
     "key": "major_19",
@@ -214,6 +237,8 @@ window.DECK =
     "reversed": "Traditional: temporary clouds, subdued optimism. Inner reading: the light is present but blocked. Gentle prompt: What small action would let more light in today?",
     "uprightLong": "The Sun radiates confidence, clarity, and vitality. It’s the moment you realize your joy doesn’t need justification. This card encourages full self‑expression — speak proudly, laugh loudly, live visibly. Success grows where authenticity shines without apology. Celebrate progress, however modest. Happiness strengthens resilience more than self‑criticism ever could. Choose activities that feel like sunshine to your system.",
     "reversedLong": "Reversed, The Sun reveals temporary dimness — fatigue, self‑doubt, or creative block. You may be underestimating your achievements or comparing your pace to others. Step into sunlight literally or metaphorically: movement, connection, or play. Reignite positivity through physical engagement, not thought. Joy returns when you act like it’s possible."
+    "promptUpright": "What moment of lightness could you let yourself feel fully today?",
+    "promptReversed": "What activity always brightens you, no matter your mood?"
   },
   {
     "key": "major_20",
@@ -224,6 +249,8 @@ window.DECK =
     "reversed": "Traditional: self-doubt, delay, harsh self-judgment. Inner reading: you don’t need a verdict to begin again. Gentle prompt: What compassionate reframe would let you step forward now?",
     "uprightLong": "Judgement marks awakening — seeing your life with new clarity and forgiving the past version of yourself. It’s a call to act on what you’ve learned, not just think about it. Self‑forgiveness transforms guilt into wisdom. Recognize how far you’ve come, then decide what the next evolution requires. Let go of regret; you can’t heal by punishing yourself. Answer the call with a specific, life‑affirming step.",
     "reversedLong": "Reversed, Judgement suggests hesitation to accept growth or guilt for changing. You may doubt you’re ready for a new stage or fear losing belonging by evolving. But staying small helps no one. Review lessons, acknowledge mistakes, then act. Redemption isn’t earned — it’s allowed. Choose the next right step and let it redefine you."
+    "promptUpright": "What decision could honor who you’ve become rather than who you were?",
+    "promptReversed": "What would forgiving yourself make space to begin?"
   },
   {
     "key": "major_21",
@@ -234,6 +261,8 @@ window.DECK =
     "reversed": "Traditional: almost there, loose ends, delay. Inner reading: one stitch remains. Gentle prompt: What final tidy action would free you to begin the next chapter cleanly?",
     "uprightLong": "The World signifies completion, mastery, and integration. You’ve reached a milestone and can finally see the coherence behind past struggles. Celebrate the closure and the wisdom it brings. This is not an end but a pause before renewal — every ending seeds a new Fool’s journey. Recognize yourself as whole, not just achieving but understanding. Mark the moment so your body remembers it.",
     "reversedLong": "Reversed, The World suggests almost‑finished business or lingering doubt after success. You may minimize achievements or avoid closure out of fear of emptiness. Take time to acknowledge the finish — integration matters as much as ambition. Only then can new cycles begin cleanly. Do the last small thing that makes it complete."
+    "promptUpright": "What ritual could help you honor how far you’ve come?",
+    "promptReversed": "What would “done” look like if you let it feel complete?”*?
   },
   {
     "key": "wands_ace",
