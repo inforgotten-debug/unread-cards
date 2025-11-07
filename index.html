@@ -101,11 +101,14 @@
       if(imgSrc){ imgEl.src = imgSrc; imgEl.alt = `${card.name} — ${reversed ? 'Reversed' : 'Upright'}`; }
       titleEl.textContent = card?.name || 'Unknown Card';
       badgeEl.textContent = reversed ? 'Reversed' : 'Upright';
-      descEl.innerHTML = `
-        <p style="margin:0;">${text}</p>
-        ${card.prompt ? `<p style="margin:4px 0 0; color:#e7c56f; font-style:italic;">${card.prompt}</p>` : ''}
-      `;
-
+    descEl.innerHTML = `
+      <p style="margin:0;">${text}</p>
+      ${
+        reversed
+          ? (card.promptReversed ? `<p style="margin:4px 0 0; color:#e7c56f; font-style:italic;">${card.promptReversed}</p>` : '')
+          : (card.promptUpright ? `<p style="margin:4px 0 0; color:#e7c56f; font-style:italic;">${card.promptUpright}</p>` : '')
+      }
+    `;
       resultEl.style.display = 'block';
       // Scroll result into view on mobile after draw
       setTimeout(()=>{ resultEl.scrollIntoView({ behavior:'smooth', block:'start' }); }, 0);
