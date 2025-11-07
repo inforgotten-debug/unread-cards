@@ -1,5 +1,4 @@
-window.DECK =
-[
+window.DECK = [
   {
     "key": "major_00",
     "name": "The Fool (0)",
